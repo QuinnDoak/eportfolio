@@ -655,7 +655,11 @@
   }
 
   /* SKILLS */
-  .skills-container { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2.5rem;
+  }
 
   .skill-category h3 {
     font-family: 'JetBrains Mono', monospace;
@@ -663,33 +667,33 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--accent);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid var(--border);
   }
 
-  .skill-item {
+  .skill-chips {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid rgba(30,41,59,0.5);
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 
-  .skill-name { font-weight: 400; font-size: 0.95rem; }
-
-  .skill-bar-container {
-    width: 120px; height: 4px;
-    background: var(--border);
-    border-radius: 2px;
-    overflow: hidden;
+  .skill-chip {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.5px;
+    padding: 0.45rem 0.85rem;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    background: var(--bg-card);
+    transition: border-color 0.3s, color 0.3s, background 0.3s, transform 0.3s;
   }
 
-  .skill-bar {
-    height: 100%;
-    background: linear-gradient(90deg, var(--accent), var(--accent-green));
-    border-radius: 2px;
-    transition: width 1.5s ease-out;
+  .skill-chip:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(45,212,191,0.05);
+    transform: translateY(-1px);
   }
 
   .certifications {
@@ -830,88 +834,6 @@
 
   .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-  /* NOW PLAYING */
-  .now-playing {
-    display: flex;
-    align-items: center;
-    gap: 0.85rem;
-    margin-top: 1.75rem;
-    padding: 0.7rem 1rem;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--accent-green);
-    max-width: 340px;
-    opacity: 0;
-    animation: fadeUp 0.6s ease-out 0.8s forwards;
-  }
-
-  .np-pulse {
-    display: flex;
-    align-items: flex-end;
-    gap: 2px;
-    height: 14px;
-    flex-shrink: 0;
-  }
-
-  .np-pulse span {
-    display: block;
-    width: 3px;
-    background: var(--accent-green);
-    border-radius: 1px;
-    animation: eqBar 1s ease-in-out infinite;
-  }
-
-  .np-pulse span:nth-child(1) { height: 6px; animation-delay: 0s; }
-  .np-pulse span:nth-child(2) { height: 10px; animation-delay: 0.15s; }
-  .np-pulse span:nth-child(3) { height: 4px; animation-delay: 0.3s; }
-
-  .now-playing.paused .np-pulse span { animation: none; height: 4px; opacity: 0.4; }
-
-  @keyframes eqBar {
-    0%, 100% { height: 4px; }
-    50% { height: 14px; }
-  }
-
-  .np-art {
-    width: 40px;
-    height: 40px;
-    border: 1px solid var(--border);
-    flex-shrink: 0;
-    object-fit: cover;
-  }
-
-  .np-info { overflow: hidden; min-width: 0; }
-
-  .np-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.55rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--accent-green);
-    margin-bottom: 0.15rem;
-  }
-
-  .now-playing.paused .np-label { color: var(--text-muted); }
-
-  .np-track {
-    font-size: 0.82rem;
-    font-weight: 500;
-    color: var(--text-primary);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 1.3;
-  }
-
-  .np-artist {
-    font-size: 0.72rem;
-    color: var(--text-muted);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 1.3;
-  }
-
   /* RESPONSIVE */
   @media (max-width: 768px) {
     .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
@@ -919,7 +841,6 @@
     .hero-photo-col { order: -1; }
     .hero-actions { justify-content: center; }
     .hero-details { align-items: center; }
-    .now-playing { margin-left: auto; margin-right: auto; }
     .about-grid { grid-template-columns: 1fr; }
     .skills-container { grid-template-columns: 1fr; }
     .nav-links { gap: 1rem; }
@@ -969,15 +890,6 @@
         <a href="#academics" class="btn btn-primary">View Coursework</a>
         <a href="#contact" class="btn btn-outline">Get in Touch</a>
         <a href="resume.pdf" class="btn btn-download" download>&#x2913; Resume</a>
-      </div>
-      <div class="now-playing" id="nowPlaying" style="display:none;">
-        <div class="np-pulse"><span></span><span></span><span></span></div>
-        <img class="np-art" id="npArt" src="" alt="Album art">
-        <div class="np-info">
-          <div class="np-label" id="npLabel">Listening Now</div>
-          <div class="np-track" id="npTrack"></div>
-          <div class="np-artist" id="npArtist"></div>
-        </div>
       </div>
     </div>
   </div>
@@ -1030,13 +942,6 @@
           <li>Explored PKI frameworks, certificate authorities, and FIDO authentication standards</li>
           <li>Analyzed SSO implementations and authentication protocols</li>
         </ul>
-      
-        <div class="artifacts-label">Artifacts</div>
-        <div class="course-artifacts">
-          <a href="#" class="artifact-link">Network Wiring Plan</a>
-          <a href="#" class="artifact-link">PKI Discussion Post</a>
-          <a href="#" class="artifact-link">IPv6 Analysis</a>
-        </div>
         <div class="course-tags">
           <span class="tag">Network Design</span><span class="tag">PKI</span><span class="tag">IPv6</span><span class="tag">Infrastructure</span>
         </div>
@@ -1064,13 +969,6 @@
           <li>Worked extensively with Vi editor for system configuration and scripting</li>
           <li>Configured file permissions and ownership for multi-user environments</li>
         </ul>
-        
-        <div class="artifacts-label">Artifacts</div>
-        <div class="course-artifacts">
-          <a href="#" class="artifact-link">Password Cracking Lab</a>
-          <a href="#" class="artifact-link">User Admin Lab</a>
-          <a href="#" class="artifact-link">Vi Editor Assignment</a>
-        </div>
         <div class="course-tags">
           <span class="tag">Kali Linux</span><span class="tag">John the Ripper</span><span class="tag">Vi Editor</span><span class="tag">Permissions</span>
         </div>
@@ -1099,11 +997,6 @@
           <li>Compared VirtualBox vs. VMware for secure lab environments</li>
         </ul>
 
-        <div class="artifacts-label">Artifacts</div>
-        <div class="course-artifacts">
-          <a href="#" class="artifact-link">Target Breach Paper</a>
-          <a href="#" class="artifact-link">NEXUS/NovaNET Report</a>
-        </div>
         <div class="course-tags">
           <span class="tag">Incident Analysis</span><span class="tag">Protocol Design</span><span class="tag">Risk Management</span>
         </div>
@@ -1131,11 +1024,6 @@
           <li>Explored government transparency policies and cyber operations</li>
           <li>Studied legal precedents in data privacy regulation</li>
         </ul>
-        <div class="artifacts-label">Artifacts</div>
-        <div class="course-artifacts">
-          <a href="#" class="artifact-link">4th Amendment Paper</a>
-          <a href="#" class="artifact-link">WikiLeaks Discussion</a>
-        </div>
         <div class="course-tags">
           <span class="tag">4th Amendment</span><span class="tag">Digital Privacy</span><span class="tag">WikiLeaks</span><span class="tag">Policy</span>
         </div>
@@ -1158,13 +1046,11 @@
       <div class="course-body">
         <p class="course-desc">Study of criminal behavior in digital spaces, cybercrime typologies, digital forensics foundations, and the factors driving cybercriminal activity.</p>
         <ul class="course-highlights">
-          <li>Add your key projects, papers, or topics from this course</li>
-          <li>Add another highlight here</li>
+          <li>Analyzed Routine Activity Theory applied to online victimization</li>
+          <li>Researched hacker subcultures and motivations across hacktivism, insider threats, and organized cybercrime</li>
+          <li>Studied digital forensics fundamentals, evidence handling, and chain of custody</li>
+          <li>Examined the evolution of cybercrime legislation and cross-border enforcement challenges</li>
         </ul>
-        <div class="artifacts-label">Artifacts</div>
-        <div class="course-artifacts">
-          <a href="#" class="artifact-link">Add Artifact</a>
-        </div>
         <div class="course-tags">
           <span class="tag">Cybercrime</span><span class="tag">Digital Forensics</span><span class="tag">Criminal Justice</span>
         </div>
@@ -1187,15 +1073,13 @@
       <div class="course-body">
         <p class="course-desc">Programming concepts and networking fundamentals applied to cybersecurity, including scripting, TCP/IP, subnetting, and network troubleshooting.</p>
         <ul class="course-highlights">
-          <li>Add your key projects, papers, or topics from this course</li>
-          <li>Add another highlight here</li>
+          <li>Built Python scripts for file parsing, input validation, and basic automation</li>
+          <li>Practiced subnetting, CIDR, and IP addressing through hands-on lab exercises</li>
+          <li>Captured and analyzed live network traffic using Wireshark</li>
+          <li>Completed socket programming exercises using a client/server model</li>
         </ul>
-        <div class="artifacts-label">Artifacts</div>
-        <div class="course-artifacts">
-          <a href="#" class="artifact-link">Add Artifact</a>
-        </div>
         <div class="course-tags">
-          <span class="tag">Programming</span><span class="tag">TCP/IP</span><span class="tag">Networking</span><span class="tag">Scripting</span>
+          <span class="tag">Python</span><span class="tag">TCP/IP</span><span class="tag">Wireshark</span><span class="tag">Subnetting</span>
         </div>
       </div>
     </div>
@@ -1216,13 +1100,11 @@
       <div class="course-body">
         <p class="course-desc">Exploration of cybersecurity's role in society, examining how technology intersects with culture, policy, ethics, and global security challenges.</p>
         <ul class="course-highlights">
-          <li>Add your key projects, papers, or topics from this course</li>
-          <li>Add another highlight here</li>
+          <li>Wrote reflection essays connecting the CIA triad to real-world breach case studies</li>
+          <li>Examined the societal impact of surveillance, data collection, and privacy policy</li>
+          <li>Analyzed cybersecurity risk in healthcare, finance, and critical infrastructure sectors</li>
+          <li>Evaluated the ethical responsibilities of security practitioners in public and private roles</li>
         </ul>
-        <div class="artifacts-label">Artifacts</div>
-        <div class="course-artifacts">
-          <a href="#" class="artifact-link">Add Artifact</a>
-        </div>
         <div class="course-tags">
           <span class="tag">Society</span><span class="tag">Ethics</span><span class="tag">Technology</span><span class="tag">Policy</span>
         </div>
@@ -1245,13 +1127,11 @@
       <div class="course-body">
         <p class="course-desc">Interdisciplinary study connecting cybersecurity to social science research methods, human behavior, and the social dimensions of digital security.</p>
         <ul class="course-highlights">
-          <li>Add your key projects, papers, or topics from this course</li>
-          <li>Add another highlight here</li>
+          <li>Applied social science research methods to cybersecurity case studies and surveys</li>
+          <li>Studied human factors in phishing susceptibility and social engineering attacks</li>
+          <li>Explored cyber-victimization research and patterns of online risk behavior</li>
+          <li>Built a literature review connecting psychology and cyber-offending</li>
         </ul>
-        <div class="artifacts-label">Artifacts</div>
-        <div class="course-artifacts">
-          <a href="#" class="artifact-link">Add Artifact</a>
-        </div>
         <div class="course-tags">
           <span class="tag">Social Science</span><span class="tag">Research</span><span class="tag">Human Behavior</span>
         </div>
@@ -1278,10 +1158,6 @@
           <li>Developed technical writing skills for security documentation</li>
           <li>Strengthened ability to communicate complex concepts to non-technical audiences</li>
         </ul>
-        <div class="artifacts-label">Artifacts</div>
-        <div class="course-artifacts">
-          <a href="#" class="artifact-link">Interdisciplinary Essay</a>
-        </div>
         <div class="course-tags">
           <span class="tag">APA Writing</span><span class="tag">Research</span><span class="tag">Technical Communication</span>
         </div>
@@ -1304,13 +1180,11 @@
       <div class="course-body">
         <p class="course-desc">Ethical reasoning and moral philosophy, providing a critical framework for evaluating dilemmas in cybersecurity, privacy, and technology.</p>
         <ul class="course-highlights">
-          <li>Add your key projects, papers, or topics from this course</li>
-          <li>Add another highlight here</li>
+          <li>Compared utilitarian, deontological, and virtue-ethics frameworks in applied contexts</li>
+          <li>Applied ethical reasoning to real-world tech dilemmas including privacy, AI, and surveillance</li>
+          <li>Wrote argumentative papers defending positions on contested moral issues</li>
+          <li>Discussed the ethical responsibilities carried by cybersecurity professionals</li>
         </ul>
-        <div class="artifacts-label">Artifacts</div>
-        <div class="course-artifacts">
-          <a href="#" class="artifact-link">Add Artifact</a>
-        </div>
         <div class="course-tags">
           <span class="tag">Ethics</span><span class="tag">Philosophy</span><span class="tag">Moral Reasoning</span>
         </div>
@@ -1333,13 +1207,11 @@
       <div class="course-body">
         <p class="course-desc">Foundational study of crime, justice systems, and sociological theories explaining criminal behavior — essential context for understanding cybercrime.</p>
         <ul class="course-highlights">
-          <li>Add your key projects, papers, or topics from this course</li>
-          <li>Add another highlight here</li>
+          <li>Studied classical, strain, and social-learning theories of criminal behavior</li>
+          <li>Explored the structure and function of the U.S. criminal justice system</li>
+          <li>Analyzed the relationship between crime, law, and social policy</li>
+          <li>Connected traditional criminology to emerging patterns in cybercrime</li>
         </ul>
-        <div class="artifacts-label">Artifacts</div>
-        <div class="course-artifacts">
-          <a href="#" class="artifact-link">Add Artifact</a>
-        </div>
         <div class="course-tags">
           <span class="tag">Criminal Justice</span><span class="tag">Sociology</span><span class="tag">Theory</span>
         </div>
@@ -1356,18 +1228,51 @@
   </div>
   <div class="skills-container fade-in">
     <div class="skill-category">
-      <h3>Security &amp; Networking</h3>
-      <div class="skill-item"><span class="skill-name">Network Security</span><div class="skill-bar-container"><div class="skill-bar" style="width:85%"></div></div></div>
-      <div class="skill-item"><span class="skill-name">Penetration Testing</span><div class="skill-bar-container"><div class="skill-bar" style="width:70%"></div></div></div>
-      <div class="skill-item"><span class="skill-name">Authentication &amp; PKI</span><div class="skill-bar-container"><div class="skill-bar" style="width:80%"></div></div></div>
-      <div class="skill-item"><span class="skill-name">Threat Analysis</span><div class="skill-bar-container"><div class="skill-bar" style="width:75%"></div></div></div>
+      <h3>Operating Systems</h3>
+      <div class="skill-chips">
+        <span class="skill-chip">Kali Linux</span>
+        <span class="skill-chip">Ubuntu</span>
+        <span class="skill-chip">Debian</span>
+        <span class="skill-chip">Windows</span>
+        <span class="skill-chip">macOS</span>
+        <span class="skill-chip">VirtualBox</span>
+        <span class="skill-chip">VMware</span>
+      </div>
     </div>
     <div class="skill-category">
-      <h3>Systems &amp; Tools</h3>
-      <div class="skill-item"><span class="skill-name">Linux / Kali Linux</span><div class="skill-bar-container"><div class="skill-bar" style="width:85%"></div></div></div>
-      <div class="skill-item"><span class="skill-name">Virtualization (VMs)</span><div class="skill-bar-container"><div class="skill-bar" style="width:75%"></div></div></div>
-      <div class="skill-item"><span class="skill-name">Wireshark / Nmap</span><div class="skill-bar-container"><div class="skill-bar" style="width:70%"></div></div></div>
-      <div class="skill-item"><span class="skill-name">Technical Writing</span><div class="skill-bar-container"><div class="skill-bar" style="width:90%"></div></div></div>
+      <h3>Networking &amp; Analysis</h3>
+      <div class="skill-chips">
+        <span class="skill-chip">Wireshark</span>
+        <span class="skill-chip">Nmap</span>
+        <span class="skill-chip">TCP/IP</span>
+        <span class="skill-chip">Subnetting</span>
+        <span class="skill-chip">DNS</span>
+        <span class="skill-chip">DHCP</span>
+        <span class="skill-chip">IPv6</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <h3>Security &amp; Identity</h3>
+      <div class="skill-chips">
+        <span class="skill-chip">PKI</span>
+        <span class="skill-chip">FIDO</span>
+        <span class="skill-chip">SSO</span>
+        <span class="skill-chip">MFA</span>
+        <span class="skill-chip">John the Ripper</span>
+        <span class="skill-chip">Password Cracking</span>
+        <span class="skill-chip">Threat Analysis</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <h3>Programming &amp; Scripting</h3>
+      <div class="skill-chips">
+        <span class="skill-chip">Python</span>
+        <span class="skill-chip">Bash</span>
+        <span class="skill-chip">Vi / Vim</span>
+        <span class="skill-chip">Git</span>
+        <span class="skill-chip">HTML / CSS</span>
+        <span class="skill-chip">Technical Writing</span>
+      </div>
     </div>
   </div>
   <div class="certifications fade-in">
@@ -1468,54 +1373,6 @@
       link.style.color = link.getAttribute('href') === '#' + current ? 'var(--accent)' : '';
     });
   });
-  // Last.fm Now Playing
-  (function() {
-    const LASTFM_USER = 'cQloud';
-    const LASTFM_API_KEY = 'c7600d855a08f8c0e5c33e22eff01ae5'; // Replace with your Last.fm API key
-
-    const el = document.getElementById('nowPlaying');
-    const artEl = document.getElementById('npArt');
-    const trackEl = document.getElementById('npTrack');
-    const artistEl = document.getElementById('npArtist');
-    const labelEl = document.getElementById('npLabel');
-
-    async function fetchNowPlaying() {
-      try {
-        const res = await fetch(
-          `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${LASTFM_USER}&api_key=${LASTFM_API_KEY}&format=json&limit=1`
-        );
-        const data = await res.json();
-        if (data.error) return;
-
-        const track = data.recenttracks?.track?.[0];
-        if (!track) return;
-
-        const isNowPlaying = track['@attr']?.nowplaying === 'true';
-
-        trackEl.textContent = track.name || 'Unknown Track';
-        artistEl.textContent = track.artist?.['#text'] || 'Unknown Artist';
-        labelEl.textContent = isNowPlaying ? 'Listening Now' : 'Last Played';
-
-        const img = track.image?.[2]?.['#text'] || track.image?.[1]?.['#text'] || '';
-        if (img) {
-          artEl.src = img;
-          artEl.style.display = 'block';
-        } else {
-          artEl.style.display = 'none';
-        }
-
-        el.classList.toggle('paused', !isNowPlaying);
-        el.style.display = 'flex';
-      } catch (e) {
-        // Silently fail — widget just won't show
-      }
-    }
-
-    if (LASTFM_API_KEY !== 'YOUR_API_KEY_HERE') {
-      fetchNowPlaying();
-      setInterval(fetchNowPlaying, 30000); // Refresh every 30s
-    }
-  })();
 </script>
 </body>
 </html>
