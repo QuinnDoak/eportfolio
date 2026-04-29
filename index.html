@@ -654,6 +654,112 @@
     color: var(--accent);
   }
 
+  /* LAB BLOCKS */
+  .lab-block {
+    margin-bottom: 1.25rem;
+  }
+
+  .lab-block-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .course-card.accent-green .lab-block-label { color: var(--accent-green); }
+  .course-card.accent-orange .lab-block-label { color: var(--accent-orange); }
+  .course-card.accent-purple .lab-block-label { color: var(--accent-purple); }
+  .course-card.accent-red .lab-block-label { color: var(--accent-red); }
+  .course-card.accent-yellow .lab-block-label { color: var(--accent-yellow); }
+
+  .lab-block p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  /* GOALS / REFLECTION */
+  .goals-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+
+  .goals-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    padding: 2rem;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+
+  .goals-card:hover { transform: translateY(-3px); }
+  .goals-card.accent-green { border-left-color: var(--accent-green); }
+  .goals-card.accent-purple { border-left-color: var(--accent-purple); }
+  .goals-card.accent-orange { border-left-color: var(--accent-orange); }
+
+  .goals-card h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .goals-card.accent-green h3 { color: var(--accent-green); }
+  .goals-card.accent-purple h3 { color: var(--accent-purple); }
+  .goals-card.accent-orange h3 { color: var(--accent-orange); }
+
+  .goals-card p {
+    color: var(--text-secondary);
+    font-weight: 300;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .goals-card p:last-child { margin-bottom: 0; }
+
+  .activities-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .activities-list li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    padding-left: 1.25rem;
+    position: relative;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  .activities-list li::before {
+    content: '\25B9';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  .goals-card.accent-green .activities-list li::before { color: var(--accent-green); }
+  .goals-card.accent-purple .activities-list li::before { color: var(--accent-purple); }
+  .goals-card.accent-orange .activities-list li::before { color: var(--accent-orange); }
+
+  .activities-list li strong {
+    color: var(--text-primary);
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .goals-grid { grid-template-columns: 1fr; }
+  }
+
   /* SKILLS */
   .skills-container {
     display: grid;
@@ -863,7 +969,9 @@
   <div class="nav-links">
     <a href="#about">About</a>
     <a href="#academics">Academics</a>
+    <a href="#labs">CYSE 270 Labs</a>
     <a href="#skills">Skills</a>
+    <a href="#goals">Goals</a>
     <a href="#contact">Contact</a>
     <a href="resume.pdf" class="nav-resume" download>&#x2913; Resume</a>
   </div>
@@ -1221,9 +1329,276 @@
   </div>
 </section>
 
+<section id="labs">
+  <div class="section-header fade-in">
+    <div class="section-label">03 — CYSE 270 Labs</div>
+    <h2 class="section-title">Linux Lab Reflections</h2>
+    <p class="section-subtitle">Reflections from each lab completed in CYSE 270 — Linux Systems for Cybersecurity. Click any lab to expand.</p>
+  </div>
+  <div class="course-grid fade-in">
+
+    <!-- Lab 1 -->
+    <div class="course-card accent-green" onclick="this.classList.toggle('open')">
+      <div class="course-header">
+        <div class="course-header-left">
+          <div class="course-info">
+            <div class="course-code">Lab 1</div>
+            <div class="course-name">Linux Installation &amp; VM Setup</div>
+            <div class="course-semester">Kali Linux on VirtualBox</div>
+          </div>
+        </div>
+        <div class="course-toggle">+</div>
+      </div>
+      <div class="course-body">
+        <div class="lab-block" style="padding-top: 0.75rem; border-top: 1px solid var(--border);">
+          <div class="lab-block-label">Experience</div>
+          <p>This first lab walked through installing Kali Linux as a virtual machine in VirtualBox. I downloaded the ISO, configured the VM with appropriate RAM, CPU cores, and storage, and worked through the initial boot and login process. It was my first real hands-on exposure to running Linux in a controlled lab environment.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Key Skills &amp; Concepts</div>
+          <p>Virtualization fundamentals, hypervisor configuration, ISO mounting, allocating system resources to a guest OS, and the basics of Kali Linux as a security-focused distribution.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Challenges</div>
+          <p>The biggest hurdle was getting virtualization (VT-x) enabled in the BIOS so the VM would actually boot. Network adapter settings (NAT vs. Bridged) also took a few tries before I understood when each one made sense.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Overall Takeaway</div>
+          <p>Virtual machines are the standard sandbox for security work — they let you experiment safely without risking the host system. Setting one up cleanly is a foundational skill I'll use in nearly every future lab and project.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lab 2 -->
+    <div class="course-card accent-green" onclick="this.classList.toggle('open')">
+      <div class="course-header">
+        <div class="course-header-left">
+          <div class="course-info">
+            <div class="course-code">Lab 2</div>
+            <div class="course-name">Basic Linux Commands &amp; File System Navigation</div>
+            <div class="course-semester">Filesystem Hierarchy &amp; Terminal Fluency</div>
+          </div>
+        </div>
+        <div class="course-toggle">+</div>
+      </div>
+      <div class="course-body">
+        <div class="lab-block" style="padding-top: 0.75rem; border-top: 1px solid var(--border);">
+          <div class="lab-block-label">Experience</div>
+          <p>This lab introduced me to navigating Linux entirely from the command line. I practiced moving around the filesystem with cd, ls, and pwd, and used mkdir, cp, mv, and rm to manage files and directories. I also explored important system directories like /etc, /home, /var, and /usr to understand how Linux organizes itself.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Key Skills &amp; Concepts</div>
+          <p>The Linux Filesystem Hierarchy Standard, absolute vs. relative paths, command flags and options, manual pages (man), and core file management commands.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Challenges</div>
+          <p>Memorizing all the flags felt overwhelming at first, and I made several mistakes confusing absolute paths with relative ones. Learning to read man pages was slow but eventually became second nature.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Overall Takeaway</div>
+          <p>Comfort with the command line is non-negotiable in cybersecurity. This lab built the muscle memory that makes every future task — from log analysis to scripting — feel approachable instead of intimidating.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lab 3 -->
+    <div class="course-card accent-green" onclick="this.classList.toggle('open')">
+      <div class="course-header">
+        <div class="course-header-left">
+          <div class="course-info">
+            <div class="course-code">Lab 3</div>
+            <div class="course-name">Vi Editor</div>
+            <div class="course-semester">Text Editing in the Terminal</div>
+          </div>
+        </div>
+        <div class="course-toggle">+</div>
+      </div>
+      <div class="course-body">
+        <div class="lab-block" style="padding-top: 0.75rem; border-top: 1px solid var(--border);">
+          <div class="lab-block-label">Experience</div>
+          <p>This lab was my first real exposure to Vi. I practiced opening files, switching between command and insert modes, navigating with hjkl, deleting and yanking lines, and saving with :w and :wq. The modal editing approach felt foreign coming from regular text editors, but I started to see the power once I got used to it.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Key Skills &amp; Concepts</div>
+          <p>Modal editing, command vs. insert mode, navigation keys, search and replace, basic Vi commands (:w, :q, :wq, :q!), and editing configuration files directly in the terminal.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Challenges</div>
+          <p>Remembering to switch modes was the constant challenge — I lost count of how many times I tried to type and ended up triggering commands instead. Quitting without saving (:q!) took a few panicked moments to figure out the first time.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Overall Takeaway</div>
+          <p>Vi is everywhere on Linux systems, especially on minimal servers where graphical editors aren't installed. Knowing it gives me the confidence to edit configs directly on any system, which is exactly the kind of skill a security professional or sysadmin needs.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lab 4 -->
+    <div class="course-card accent-green" onclick="this.classList.toggle('open')">
+      <div class="course-header">
+        <div class="course-header-left">
+          <div class="course-info">
+            <div class="course-code">Lab 4</div>
+            <div class="course-name">User and Group Accounts</div>
+            <div class="course-semester">Identity &amp; Access Foundations</div>
+          </div>
+        </div>
+        <div class="course-toggle">+</div>
+      </div>
+      <div class="course-body">
+        <div class="lab-block" style="padding-top: 0.75rem; border-top: 1px solid var(--border);">
+          <div class="lab-block-label">Experience</div>
+          <p>I created and managed user accounts using useradd, passwd, and userdel, then worked with groups using groupadd, gpasswd, and usermod. I also looked into /etc/passwd, /etc/shadow, and /etc/group to see how Linux actually stores account information under the hood.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Key Skills &amp; Concepts</div>
+          <p>User and group management, primary vs. secondary groups, the structure of system account files, password aging, and how Linux ties identity to access control.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Challenges</div>
+          <p>Getting comfortable with the difference between useradd and adduser took a minute, and I had to be careful editing /etc/group and /etc/passwd without breaking the system. Group memberships not updating until the next login was also confusing at first.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Overall Takeaway</div>
+          <p>User and group management is the entry point of access control on any Linux system. If accounts are managed sloppily, every other security control downstream gets weaker. This lab made the principle of least privilege feel concrete instead of abstract.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lab 5 -->
+    <div class="course-card accent-green" onclick="this.classList.toggle('open')">
+      <div class="course-header">
+        <div class="course-header-left">
+          <div class="course-info">
+            <div class="course-code">Lab 5</div>
+            <div class="course-name">File Permissions &amp; Ownership</div>
+            <div class="course-semester">chmod, chown &amp; Special Bits</div>
+          </div>
+        </div>
+        <div class="course-toggle">+</div>
+      </div>
+      <div class="course-body">
+        <div class="lab-block" style="padding-top: 0.75rem; border-top: 1px solid var(--border);">
+          <div class="lab-block-label">Experience</div>
+          <p>This lab walked through Linux file permissions in depth. I changed ownership with chown and chgrp, set permissions with chmod using both symbolic (u+x, g-w) and octal (755, 644) notation, and experimented with special bits like setuid, setgid, and the sticky bit.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Key Skills &amp; Concepts</div>
+          <p>The rwx permission model, owner / group / other, octal vs. symbolic notation, umask defaults, and the security implications of setuid/setgid binaries.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Challenges</div>
+          <p>The octal notation didn't click for me right away — translating rwx into 4+2+1 in my head felt slow. Once I drilled it a few times, it became almost automatic.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Overall Takeaway</div>
+          <p>Permissions are the bedrock of Linux access control, and most real-world Linux misconfigurations come down to overly broad permissions. This lab made me much more careful about who can read, write, and execute what.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lab 6 -->
+    <div class="course-card accent-green" onclick="this.classList.toggle('open')">
+      <div class="course-header">
+        <div class="course-header-left">
+          <div class="course-info">
+            <div class="course-code">Lab 6</div>
+            <div class="course-name">Shell Scripting with Bash</div>
+            <div class="course-semester">Automation Fundamentals</div>
+          </div>
+        </div>
+        <div class="course-toggle">+</div>
+      </div>
+      <div class="course-body">
+        <div class="lab-block" style="padding-top: 0.75rem; border-top: 1px solid var(--border);">
+          <div class="lab-block-label">Experience</div>
+          <p>I wrote my first real Bash scripts in this lab, starting with simple #!/bin/bash files and building up to scripts that used variables, conditionals (if/elif/else), and loops (for, while). I also worked with command substitution and basic argument handling using $1, $2, and $@.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Key Skills &amp; Concepts</div>
+          <p>Shebang lines, variables and quoting, conditional logic, loops, exit codes, command substitution, and making scripts executable with chmod +x.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Challenges</div>
+          <p>Bash quoting rules tripped me up repeatedly — single quotes vs. double quotes vs. backticks all behave differently. I also forgot to chmod +x my scripts more than once and wasted time wondering why they wouldn't run.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Overall Takeaway</div>
+          <p>Shell scripts let admins and analysts automate repetitive tasks — log parsing, account audits, batch operations. Even basic scripting skills multiply what one person can do, and this lab gave me a solid base to build on.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lab 7 -->
+    <div class="course-card accent-green" onclick="this.classList.toggle('open')">
+      <div class="course-header">
+        <div class="course-header-left">
+          <div class="course-info">
+            <div class="course-code">Lab 7</div>
+            <div class="course-name">Process &amp; Service Management</div>
+            <div class="course-semester">ps, top, systemctl &amp; Signals</div>
+          </div>
+        </div>
+        <div class="course-toggle">+</div>
+      </div>
+      <div class="course-body">
+        <div class="lab-block" style="padding-top: 0.75rem; border-top: 1px solid var(--border);">
+          <div class="lab-block-label">Experience</div>
+          <p>I used ps and top to inspect running processes, sent signals with kill (including SIGTERM and SIGKILL), and managed services with systemctl. I also experimented with foreground/background jobs using &amp;, jobs, and fg.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Key Skills &amp; Concepts</div>
+          <p>Process states, PID/PPID, signals, foreground vs. background jobs, systemd unit management, and reading resource usage from top.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Challenges</div>
+          <p>Knowing the difference between SIGTERM and SIGKILL — and when each one is appropriate — wasn't obvious at first. I also had to be careful not to kill critical system processes while experimenting.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Overall Takeaway</div>
+          <p>Process control is critical for incident response. If a host is compromised or behaving strangely, the first thing an analyst usually does is look at what's running. Building familiarity with these tools now will pay off in any blue-team role.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lab 8 -->
+    <div class="course-card accent-green" onclick="this.classList.toggle('open')">
+      <div class="course-header">
+        <div class="course-header-left">
+          <div class="course-info">
+            <div class="course-code">Lab 8</div>
+            <div class="course-name">Password Cracking with John the Ripper</div>
+            <div class="course-semester">Hash Analysis &amp; Dictionary Attacks</div>
+          </div>
+        </div>
+        <div class="course-toggle">+</div>
+      </div>
+      <div class="course-body">
+        <div class="lab-block" style="padding-top: 0.75rem; border-top: 1px solid var(--border);">
+          <div class="lab-block-label">Experience</div>
+          <p>This was one of my favorite labs. I extracted password hashes from /etc/shadow, fed them into John the Ripper, and ran both a default attack and a wordlist-based attack to see which weak passwords cracked first. I also experimented with different hash formats to understand how Linux stores credentials.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Key Skills &amp; Concepts</div>
+          <p>Password hashing (MD5, SHA-256, SHA-512), salting, /etc/shadow structure, dictionary vs. brute-force attacks, and the practical use of John the Ripper.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Challenges</div>
+          <p>Recognizing different hash formats from the prefix in /etc/shadow ($1$, $5$, $6$) took some research, and tuning John to use the right wordlist and rules wasn't intuitive on the first try.</p>
+        </div>
+        <div class="lab-block">
+          <div class="lab-block-label">Overall Takeaway</div>
+          <p>Weak passwords fall fast — that's the lesson. Watching common passwords crack in seconds drove home why password policies, MFA, and modern hashing algorithms aren't optional. This lab also gave me a real appreciation for the offensive side of cybersecurity.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <section id="skills">
   <div class="section-header fade-in">
-    <div class="section-label">03 — Skills &amp; Experience</div>
+    <div class="section-label">04 — Skills &amp; Experience</div>
     <h2 class="section-title">Technical Arsenal</h2>
   </div>
   <div class="skills-container fade-in">
@@ -1276,7 +1651,7 @@
     </div>
   </div>
   <div class="certifications fade-in">
-    <h3>Certifications &amp; Coursework</h3>
+    <h3>Completed Coursework</h3>
     <ul class="cert-list">
       <li>CYSE 200T — Cybersecurity &amp; Society</li>
       <li>CYSE 201S — Cyber &amp; Social Sciences</li>
@@ -1284,7 +1659,6 @@
       <li>CRJS 310 — Cybercriminology</li>
       <li>CYSE 202G — Info Literacy</li>
       <li>PHIL 230E — Ethics</li>
-      <li>Google Cybersecurity Professional Certification</li>
     </ul>
   </div>
   <div class="section-header fade-in" style="margin-top: 4rem;">
@@ -1328,9 +1702,53 @@
 </div>
 </section>
 
+<section id="goals">
+  <div class="section-header fade-in">
+    <div class="section-label">05 — Goals &amp; Reflection</div>
+    <h2 class="section-title">Where I'm Headed</h2>
+    <p class="section-subtitle">Career direction, what I've taken from this semester, and the work I'm building outside the classroom.</p>
+  </div>
+
+  <div class="goals-grid fade-in">
+    <div class="goals-card">
+      <h3>Professional Goals</h3>
+      <p>After graduating from ODU in 2027, I plan to start my career in <strong style="color: var(--accent);">network and infrastructure security</strong> — building, defending, and analyzing the systems that keep an organization's data flowing safely.</p>
+      <p>I'm specifically targeting roles like network security analyst, SOC analyst, and security engineer, where I can apply the hands-on Linux skills, packet analysis with Wireshark, and network design fundamentals I've practiced through labs and projects like the Constant Hall infrastructure plan.</p>
+      <p>Long-term, I want to grow into a senior engineering role focused on secure-by-default architectures for enterprise environments, while keeping one foot in the policy side of security through my political science minor.</p>
+    </div>
+
+    <div class="goals-card accent-green">
+      <h3>Overall Reflection</h3>
+      <p>CYSE 270 was the course that finally made Linux feel like a tool I own instead of one I'm afraid to break. Working through everything from VM setup and Vi to file permissions, shell scripting, process management, and password cracking gave me a complete view of how Linux systems are built, secured, and attacked.</p>
+      <p>My terminal fluency improved dramatically over the semester — what used to feel like guessing now feels like reasoning. Skills like reading /etc/passwd, locking down permissions, and writing small scripts to automate audits will translate directly into any SOC, sysadmin, or network security role I land after graduation.</p>
+      <p>More than any single command, this course taught me how to learn Linux: read the man page, try it in a VM, break it, fix it, repeat.</p>
+    </div>
+
+    <div class="goals-card accent-purple">
+      <h3>Certifications &amp; Activities</h3>
+      <ul class="activities-list">
+        <li><strong>Google Cybersecurity Professional Certificate</strong> — completed coursework covering security frameworks, SIEM tools, network defense, and incident response.</li>
+        <li><strong>This ePortfolio</strong> — designed and hand-coded in HTML/CSS/JS, deployed via GitHub Pages with a custom domain. Maintained and version-controlled with Git.</li>
+        <li><strong>Constant Hall Network Infrastructure Plan</strong> (CYSE 495) — full network wiring and infrastructure design for an academic building at ODU.</li>
+        <li><strong>NEXUS / NovaNET Protocol Stack</strong> (CYSE 300) — designed a custom internet protocol stack as a semester-long project.</li>
+        <li><strong>Target Data Breach Analysis</strong> (CYSE 300) — research paper analyzing the 2013 incident, attack chain, and post-breach remediation.</li>
+        <li><strong>Routine Activity Theory in Cybercrime</strong> (CRJS 310) — applied criminology research to online victimization patterns.</li>
+      </ul>
+    </div>
+
+    <div class="goals-card accent-orange">
+      <h3>Resume</h3>
+      <p>My current professional resume is available for download below. It covers my coursework, technical skills, and work experience as I look for cybersecurity internships and entry-level opportunities.</p>
+      <div style="margin-top: 1.5rem;">
+        <a href="resume.pdf" class="btn btn-download" download>&#x2913; Download Resume (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="contact" class="contact-section">
   <div class="section-header fade-in" style="text-align: center;">
-    <div class="section-label" style="justify-content: center;">04 — Contact</div>
+    <div class="section-label" style="justify-content: center;">06 — Contact</div>
     <h2 class="section-title">Let's Connect</h2>
     <p style="color: var(--text-secondary); margin-top: 1rem; font-weight: 300;">Open to internships, collaborations, and security conversations.</p>
   </div>
