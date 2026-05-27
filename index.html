@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Quinn Doak — Cybersecurity student at Old Dominion University. Shipping real projects, building security tools. U.S. Citizen. Seeking Summer 2027 internship.">
 <title>Quinn — Cybersecurity ePortfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -245,18 +246,19 @@
 
   .hero-title {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--accent-dim);
     letter-spacing: 1px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
   }
 
   .hero-bio {
-    font-size: 1.05rem;
+    font-size: 1.0rem;
     color: var(--text-secondary);
     font-weight: 300;
     line-height: 1.8;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.75rem;
   }
 
   .hero-details {
@@ -423,6 +425,149 @@
   }
 
   .stat-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+
+  /* PROJECTS */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3), 0 0 15px var(--border-glow);
+    transform: translateY(-3px);
+  }
+
+  .project-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: var(--accent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .project-card:hover::before { opacity: 1; }
+
+  .project-card.accent-green::before { background: var(--accent-green); }
+  .project-card.accent-orange::before { background: var(--accent-orange); }
+  .project-card.accent-purple::before { background: var(--accent-purple); }
+  .project-card.accent-yellow::before { background: var(--accent-yellow); }
+
+  .project-card:hover.accent-green { border-color: var(--accent-green); }
+  .project-card:hover.accent-orange { border-color: var(--accent-orange); }
+  .project-card:hover.accent-purple { border-color: var(--accent-purple); }
+  .project-card:hover.accent-yellow { border-color: var(--accent-yellow); }
+
+  .project-status {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .project-status::before { content: '●'; font-size: 0.55rem; }
+
+  .project-status.live { color: var(--accent-green); }
+  .project-status.completed { color: var(--accent); }
+  .project-status.wip { color: var(--accent-yellow); }
+  .project-status.upcoming { color: var(--accent-orange); }
+
+  .project-name {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-desc {
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    font-weight: 300;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+  }
+
+  .project-highlights {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+    flex: 1;
+  }
+
+  .project-highlights li {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    padding-left: 1.25rem;
+    position: relative;
+    font-weight: 300;
+  }
+
+  .project-highlights li::before {
+    content: '\25B9';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 0.75rem;
+  }
+
+  .project-card.accent-green .project-highlights li::before { color: var(--accent-green); }
+  .project-card.accent-orange .project-highlights li::before { color: var(--accent-orange); }
+  .project-card.accent-purple .project-highlights li::before { color: var(--accent-purple); }
+  .project-card.accent-yellow .project-highlights li::before { color: var(--accent-yellow); }
+
+  .project-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: auto;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .project-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+    padding: 0.4rem 0.85rem;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    transition: all 0.3s;
+    white-space: nowrap;
+  }
+
+  .project-link:hover {
+    background: var(--accent);
+    color: var(--bg-primary);
+    box-shadow: 0 0 15px var(--accent-dim);
+  }
 
   /* ACADEMICS */
   .course-grid { display: flex; flex-direction: column; gap: 1.5rem; }
@@ -843,6 +988,7 @@
     .hero-details { align-items: center; }
     .about-grid { grid-template-columns: 1fr; }
     .skills-container { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
     .nav-links { gap: 1rem; }
     .nav-links a { font-size: 0.6rem; }
     section { padding: 4rem 1.25rem; }
@@ -862,6 +1008,7 @@
   <div class="nav-logo">QUINN</div>
   <div class="nav-links">
     <a href="#about">About</a>
+    <a href="#projects">Projects</a>
     <a href="#academics">Academics</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
@@ -878,16 +1025,16 @@
   <div class="hero-grid">
     <div class="hero-photo-col">
       <div class="hero-photo-wrapper">
-        <!-- Replace with: <img src="your-photo.jpg" alt="Quinn" class="hero-photo"> -->
-      <img src="me.jpg" alt="Quinn" class="hero-photo">
+        <img src="me.jpg" alt="Quinn" class="hero-photo">
       </div>
     </div>
     <div class="hero-text-col">
       <div class="hero-greeting">Hello, I'm</div>
       <h1 class="hero-name"><span class="highlight">Quinn</span></h1>
-      <div class="hero-title">Cybersecurity @ Old Dominion University</div>
+      <div class="hero-title">Cybersecurity @ Old Dominion University &middot; Seeking Summer 2027 Internship</div>
+      <p class="hero-bio">Building real-world security tools and shipping production projects. Based in Chesapeake, VA &mdash; U.S. Citizen &middot; Eligible for Secret clearance.</p>
       <div class="hero-actions">
-        <a href="#academics" class="btn btn-primary">View Coursework</a>
+        <a href="#projects" class="btn btn-primary">View Projects</a>
         <a href="#contact" class="btn btn-outline">Get in Touch</a>
         <a href="resume.pdf" class="btn btn-download" download>&#x2913; Resume</a>
       </div>
@@ -902,7 +1049,8 @@
   </div>
   <div class="about-grid fade-in">
     <div class="about-text">
-      <p>Hi! I'm Quinn, I'm a B.S. Cybersecurity student at Old Dominion University (Class of 2027) with a minor in political science, based in Chesapeake, Virginia. Most of my time goes into learning networking, linux, and lab work, but the poltical science minor is aimed to keep me plugged into the policy and governance side of security too. Outside of school, I'm into music, traveling, and anything and everything outside. I'm actively seeking internship and entry-level opportunities in cybersecurity. </p>
+      <p>Hi! I'm Quinn, I'm a B.S. Cybersecurity student at Old Dominion University (Class of 2027) with a minor in political science, based in Chesapeake, Virginia. Most of my time goes into learning networking, Linux, and lab work, but the political science minor is aimed to keep me plugged into the policy and governance side of security too. Outside of school, I'm into music, traveling, and anything and everything outside. I'm actively seeking internship and entry-level opportunities in cybersecurity.</p>
+      <p style="font-size: 0.85rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; letter-spacing: 0.5px;">U.S. Citizen &middot; Eligible for Secret clearance</p>
     </div>
     <div class="about-stats">
       <div class="stat-card"><div class="stat-number">ODU</div><div class="stat-label">University</div></div>
@@ -913,9 +1061,109 @@
   </div>
 </section>
 
+<section id="projects">
+  <div class="section-header fade-in">
+    <div class="section-label">02 — Projects</div>
+    <h2 class="section-title">Things I've Shipped</h2>
+    <p class="section-subtitle">Real deployments, coursework artifacts, and work in progress.</p>
+  </div>
+  <div class="projects-grid fade-in">
+
+    <!-- costbycity.net -->
+    <div class="project-card">
+      <div class="project-status live">Live</div>
+      <div class="project-name">costbycity.net</div>
+      <p class="project-desc">A production web application with 14,000+ dynamically generated city pages comparing cost-of-living data across the U.S. Real domain, DNS, SEO, AdSense, and OG image pipeline.</p>
+      <ul class="project-highlights">
+        <li>14,000+ dynamically generated city pages with D3.js data visualizations</li>
+        <li>Python data pipelines for sourcing, cleaning, and normalizing cost data</li>
+        <li>Deployed on Cloudflare Pages — full DNS, SEO, and AdSense integration</li>
+        <li>OG image generation pipeline for social sharing at scale</li>
+      </ul>
+      <div class="project-footer">
+        <div class="project-stack">
+          <span class="tag">Next.js 14</span><span class="tag">D3.js</span><span class="tag">Python</span><span class="tag">Cloudflare Pages</span>
+        </div>
+        <a href="https://costbycity.net" target="_blank" class="project-link">&#x2197; Live Site</a>
+      </div>
+    </div>
+
+    <!-- Constant Hall Network Design -->
+    <div class="project-card accent-green">
+      <div class="project-status completed">Completed</div>
+      <div class="project-name">Constant Hall Network Infrastructure Design</div>
+      <p class="project-desc">Full network infrastructure design for Constant Hall at ODU covering all floors. Delivered as a stakeholder-ready PDF presentation applying TIA/EIA standards. (CYSE 495)</p>
+      <ul class="project-highlights">
+        <li>Designed Cat 5e extended-star topology spanning all floors of Constant Hall</li>
+        <li>Specified MER and TC placement with full cable run estimation</li>
+        <li>Produced complete materials budget and sourcing plan</li>
+        <li>Applied TIA/EIA-568 structured cabling standards throughout</li>
+      </ul>
+      <div class="project-footer">
+        <div class="project-stack">
+          <span class="tag">Network Design</span><span class="tag">TIA/EIA-568</span><span class="tag">Cat 5e</span><span class="tag">Infrastructure</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CyberAI Summer Camp -->
+    <div class="project-card accent-purple">
+      <div class="project-status upcoming">July 2026</div>
+      <div class="project-name">CyberAI Summer Camp Curriculum</div>
+      <p class="project-desc">Staff instructor at ODU's School of Cybersecurity summer camp — authoring AI + cybersecurity curriculum for middle and high school students with no prior background.</p>
+      <ul class="project-highlights">
+        <li>Authored 4 instructional sessions covering AI fundamentals and cybersecurity</li>
+        <li>Built "Train a Simple AI Model" Google Colab notebook — password strength classifier with data poisoning demo</li>
+        <li>Produced slide decks, lesson plans, and camper handouts for each session</li>
+      </ul>
+      <div class="project-footer">
+        <div class="project-stack">
+          <span class="tag">Python</span><span class="tag">Google Colab</span><span class="tag">Curriculum Design</span><span class="tag">AI/ML</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mini SIEM Dashboard -->
+    <div class="project-card accent-yellow">
+      <div class="project-status wip">In Progress</div>
+      <div class="project-name">Mini SIEM Dashboard</div>
+      <p class="project-desc">A Python-based security information and event management system for ingesting, normalizing, and visualizing log data from multiple sources.</p>
+      <ul class="project-highlights">
+        <li>Python log parser — Phase 1 complete</li>
+        <li>Goal: ingest, normalize, and visualize security events from multiple log sources</li>
+        <li>Planned visualization layer for real-time event dashboarding</li>
+      </ul>
+      <div class="project-footer">
+        <div class="project-stack">
+          <span class="tag">Python</span><span class="tag">Log Parsing</span><span class="tag">SIEM</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Volt Typhoon Tabletop -->
+    <div class="project-card accent-orange">
+      <div class="project-status completed">Completed</div>
+      <div class="project-name">Volt Typhoon Tabletop Exercise</div>
+      <p class="project-desc">Group simulation of a Chinese state-sponsored (Volt Typhoon) attack on the Port of Virginia — detection, coordinated response, and legal authorities. (CYSE 406)</p>
+      <ul class="project-highlights">
+        <li>Simulated detection and response to a Volt Typhoon-style attack on critical infrastructure</li>
+        <li>Navigated inter-agency response coordination and legal authorities under live pressure</li>
+        <li>Applied CISA and DOD frameworks to a real-world critical infrastructure scenario</li>
+        <li>Port of Virginia selected as target: high-value, realistic critical infrastructure context</li>
+      </ul>
+      <div class="project-footer">
+        <div class="project-stack">
+          <span class="tag">Incident Response</span><span class="tag">Critical Infrastructure</span><span class="tag">Nation-State</span><span class="tag">Tabletop</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <section id="academics">
   <div class="section-header fade-in">
-    <div class="section-label">02 — Academics</div>
+    <div class="section-label">03 — Academics</div>
     <h2 class="section-title">Coursework &amp; Reflections</h2>
     <p class="section-subtitle">Click each course to explore highlights, reflections, and artifacts from my work.</p>
   </div>
@@ -925,7 +1173,6 @@
     <div class="course-card" onclick="this.classList.toggle('open')">
       <div class="course-header">
         <div class="course-header-left">
-          
           <div class="course-info">
             <div class="course-code">CYSE 495</div>
             <div class="course-name">Topics: Intro to Networking &amp; Security</div>
@@ -935,15 +1182,17 @@
         <div class="course-toggle">+</div>
       </div>
       <div class="course-body">
-        <p class="course-desc">Advanced topics course covering network infrastructure design, protocol security, encryption standards, and defense-in-depth strategies for enterprise environments.</p>
+        <p class="course-desc">Advanced topics course covering network infrastructure design, protocol security, encryption standards, and defense-in-depth strategies for enterprise environments. Capstone deliverable: a full structured cabling design for a multi-floor university building.</p>
         <ul class="course-highlights">
-          <li>Designed a full network wiring plan and infrastructure layout for Constant Hall at ODU</li>
-          <li>Studied IPv6 security implications and transition vulnerabilities</li>
+          <li>Designed a Cat 5e extended-star topology for Constant Hall at ODU — covering all floors, MER/TC placement, and cable run estimation</li>
+          <li>Produced a complete materials budget and sourcing plan; applied TIA/EIA-568 structured cabling standards</li>
+          <li>Delivered the design as a stakeholder-ready PDF presentation</li>
           <li>Explored PKI frameworks, certificate authorities, and FIDO authentication standards</li>
-          <li>Analyzed SSO implementations and authentication protocols</li>
+          <li>Studied IPv6 security implications and transition vulnerabilities</li>
+          <li>Analyzed SSO implementations and authentication protocols across enterprise environments</li>
         </ul>
         <div class="course-tags">
-          <span class="tag">Network Design</span><span class="tag">PKI</span><span class="tag">IPv6</span><span class="tag">Infrastructure</span>
+          <span class="tag">Network Design</span><span class="tag">TIA/EIA-568</span><span class="tag">PKI</span><span class="tag">IPv6</span><span class="tag">Infrastructure</span>
         </div>
       </div>
     </div>
@@ -952,7 +1201,6 @@
     <div class="course-card accent-green" onclick="this.classList.toggle('open')">
       <div class="course-header">
         <div class="course-header-left">
-          
           <div class="course-info">
             <div class="course-code">CYSE 270</div>
             <div class="course-name">Linux System for Cybersecurity</div>
@@ -962,15 +1210,16 @@
         <div class="course-toggle">+</div>
       </div>
       <div class="course-body">
-        <p class="course-desc">Hands-on Linux administration and system security, covering user management, file permissions, shell scripting, and security hardening on Kali Linux.</p>
+        <p class="course-desc">Hands-on Linux administration and system security covering user management, file permissions, shell scripting, and security hardening on Kali Linux. 11 labs completed across the semester.</p>
         <ul class="course-highlights">
           <li>Managed user/group accounts and configured access control policies on Kali Linux</li>
-          <li>Completed password cracking lab using John the Ripper</li>
-          <li>Worked extensively with Vi editor for system configuration and scripting</li>
-          <li>Configured file permissions and ownership for multi-user environments</li>
+          <li>Deep-dive into SGID and sticky-bit permissions for shared directory security</li>
+          <li>Bash scripting lab: automated rotating backup system using crontab task scheduling</li>
+          <li>NAT vs. Bridged networking in VirtualBox / Kali — traffic isolation and attack surface analysis</li>
+          <li>Password cracking lab using John the Ripper on hashed credential files</li>
         </ul>
         <div class="course-tags">
-          <span class="tag">Kali Linux</span><span class="tag">John the Ripper</span><span class="tag">Vi Editor</span><span class="tag">Permissions</span>
+          <span class="tag">Kali Linux</span><span class="tag">Bash Scripting</span><span class="tag">John the Ripper</span><span class="tag">Permissions</span><span class="tag">VirtualBox</span>
         </div>
       </div>
     </div>
@@ -979,7 +1228,6 @@
     <div class="course-card accent-purple" onclick="this.classList.toggle('open')">
       <div class="course-header">
         <div class="course-header-left">
-          
           <div class="course-info">
             <div class="course-code">CYSE 300</div>
             <div class="course-name">Introduction to Cybersecurity</div>
@@ -996,7 +1244,6 @@
           <li>Studied CIA triad, defense in depth, and risk management</li>
           <li>Compared VirtualBox vs. VMware for secure lab environments</li>
         </ul>
-
         <div class="course-tags">
           <span class="tag">Incident Analysis</span><span class="tag">Protocol Design</span><span class="tag">Risk Management</span>
         </div>
@@ -1007,7 +1254,6 @@
     <div class="course-card accent-orange" onclick="this.classList.toggle('open')">
       <div class="course-header">
         <div class="course-header-left">
-          
           <div class="course-info">
             <div class="course-code">CYSE 406</div>
             <div class="course-name">Cyber Law</div>
@@ -1017,15 +1263,16 @@
         <div class="course-toggle">+</div>
       </div>
       <div class="course-body">
-        <p class="course-desc">Legal frameworks governing cyberspace, including constitutional protections, digital privacy, government surveillance, and whistleblower cases.</p>
+        <p class="course-desc">Legal frameworks governing cyberspace, including constitutional protections, digital privacy, government surveillance, whistleblower cases, and critical infrastructure defense law.</p>
         <ul class="course-highlights">
-          <li>Analyzed Fourth Amendment implications in digital surveillance</li>
-          <li>Researched Julian Assange / WikiLeaks and transparency vs. national security</li>
-          <li>Explored government transparency policies and cyber operations</li>
-          <li>Studied legal precedents in data privacy regulation</li>
+          <li>Volt Typhoon tabletop exercise: simulated a Chinese state-sponsored attack on the Port of Virginia — detection, inter-agency response, and legal authorities under live pressure</li>
+          <li>Analyzed Fourth Amendment implications in digital surveillance and government access to electronic records</li>
+          <li>Researched Julian Assange / WikiLeaks and the tension between transparency and national security</li>
+          <li>Explored government transparency policies and the legal landscape around offensive cyber operations</li>
+          <li>Studied legal precedents in data privacy regulation and cross-border enforcement</li>
         </ul>
         <div class="course-tags">
-          <span class="tag">4th Amendment</span><span class="tag">Digital Privacy</span><span class="tag">WikiLeaks</span><span class="tag">Policy</span>
+          <span class="tag">Volt Typhoon</span><span class="tag">4th Amendment</span><span class="tag">Digital Privacy</span><span class="tag">Critical Infrastructure</span><span class="tag">Policy</span>
         </div>
       </div>
     </div>
@@ -1034,7 +1281,6 @@
     <div class="course-card accent-red" onclick="this.classList.toggle('open')">
       <div class="course-header">
         <div class="course-header-left">
-          
           <div class="course-info">
             <div class="course-code">CRJS 310</div>
             <div class="course-name">Cybercriminology: Foundations</div>
@@ -1061,7 +1307,6 @@
     <div class="course-card accent-yellow" onclick="this.classList.toggle('open')">
       <div class="course-header">
         <div class="course-header-left">
-          
           <div class="course-info">
             <div class="course-code">CYSE 250</div>
             <div class="course-name">Basic Cybersecurity Programming &amp; Networking</div>
@@ -1088,7 +1333,6 @@
     <div class="course-card" onclick="this.classList.toggle('open')">
       <div class="course-header">
         <div class="course-header-left">
-          
           <div class="course-info">
             <div class="course-code">CYSE 200T</div>
             <div class="course-name">Cybersecurity, Technology, and Society</div>
@@ -1115,7 +1359,6 @@
     <div class="course-card accent-purple" onclick="this.classList.toggle('open')">
       <div class="course-header">
         <div class="course-header-left">
-          
           <div class="course-info">
             <div class="course-code">CYSE 201S</div>
             <div class="course-name">Cybersecurity and the Social Sciences</div>
@@ -1142,7 +1385,6 @@
     <div class="course-card accent-green" onclick="this.classList.toggle('open')">
       <div class="course-header">
         <div class="course-header-left">
-          
           <div class="course-info">
             <div class="course-code">IDS 300W</div>
             <div class="course-name">Interdisciplinary Theory &amp; Concepts</div>
@@ -1168,7 +1410,6 @@
     <div class="course-card accent-orange" onclick="this.classList.toggle('open')">
       <div class="course-header">
         <div class="course-header-left">
-          
           <div class="course-info">
             <div class="course-code">PHIL 230E</div>
             <div class="course-name">Introduction to Ethics</div>
@@ -1195,7 +1436,6 @@
     <div class="course-card accent-red" onclick="this.classList.toggle('open')">
       <div class="course-header">
         <div class="course-header-left">
-          
           <div class="course-info">
             <div class="course-code">CRJS 215S</div>
             <div class="course-name">Introduction to Criminology</div>
@@ -1223,7 +1463,7 @@
 
 <section id="skills">
   <div class="section-header fade-in">
-    <div class="section-label">03 — Skills &amp; Experience</div>
+    <div class="section-label">04 — Skills &amp; Experience</div>
     <h2 class="section-title">Technical Arsenal</h2>
   </div>
   <div class="skills-container fade-in">
@@ -1276,15 +1516,20 @@
     </div>
   </div>
   <div class="certifications fade-in">
-    <h3>Certifications &amp; Coursework</h3>
+    <h3>Certifications</h3>
+    <ul class="cert-list">
+      <li>Google Cybersecurity Professional Certification</li>
+      <li>CompTIA Security+ (SY0-701) &mdash; Scheduled</li>
+    </ul>
+  </div>
+  <div class="certifications fade-in" style="margin-top: 1.5rem; border-left-color: var(--accent-green);">
+    <h3 style="color: var(--accent-green);">Relevant Coursework</h3>
     <ul class="cert-list">
       <li>CYSE 200T — Cybersecurity &amp; Society</li>
       <li>CYSE 201S — Cyber &amp; Social Sciences</li>
       <li>CYSE 250 — Programming &amp; Networking</li>
       <li>CRJS 310 — Cybercriminology</li>
-      <li>CYSE 202G — Info Literacy</li>
       <li>PHIL 230E — Ethics</li>
-      <li>Google Cybersecurity Professional Certification</li>
     </ul>
   </div>
   <div class="section-header fade-in" style="margin-top: 4rem;">
@@ -1298,39 +1543,47 @@
       <p>Focused on network security, system administration, and cyber law. Hands-on lab experience with Linux, penetration testing tools, and secure infrastructure design.</p>
     </div>
     <h4 style="color: var(--accent); margin-top: 2.5rem; margin-bottom: 1rem; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase;">Work Experience</h4>
-<div class="timeline-item">
-    <div class="timeline-date">2025 — Present</div>
-    <h4>Guest Advocate</h4>
-    <div class="org">Target — Chesapeake, VA</div>
-    <p>Handling guest services, cash transactions, and drive-up/order pickup operations. Resolving guest concerns and collaborating with the team to hit service and accuracy targets during high-volume shifts.</p>
-</div>
 
-<div class="timeline-item">
-    <div class="timeline-date">2024 — present</div>
-    <h4>Banquet Server</h4>
-    <div class="org">Chick-Fil-A — Chesapeake, VA</div>
-    <p>Support full-service catering operations for private and corporate events. Assist with event setup and breakdown, food service execution, guest interaction, and coordination with kitchen and event leads. Maintain professionalism in high-pressure environments while ensuring accuracy, presentation standards, and client satisfaction. Adapt quickly to changing event needs and timelines.</p>
-</div>
+    <div class="timeline-item">
+      <div class="timeline-date">July 2026 (Upcoming)</div>
+      <h4>Staff Instructor — CyberAI Summer Camp</h4>
+      <div class="org">ODU School of Cybersecurity — Norfolk, VA</div>
+      <p>Authored curriculum and instructed 4 sessions for middle and high school students. Built hands-on AI and cybersecurity materials including a Google Colab notebook (password strength classifier + data poisoning demo).</p>
+    </div>
 
+    <div class="timeline-item">
+      <div class="timeline-date">2022 — 2024</div>
+      <h4>Team Leader</h4>
+      <div class="org">Chick-fil-A — Chesapeake, VA</div>
+      <p>Led shifts and trained new team members on service procedures. Maintained operational efficiency and customer satisfaction in a fast-paced environment. Responsible for shift-level decision-making and team coordination.</p>
+    </div>
 
-<div class="timeline-item">
-    <div class="timeline-date">2024 - 2025</div>
-    <h4>Team Member</h4>
-    <div class="org">Plato's Closet — Chesapeake, VA</div>
-    <p>Managed inventory tagging, maintained store displays, and assisted customers with purchases and inquiries.</p>
-</div>
+    <div class="timeline-item">
+      <div class="timeline-date">2025 — Present</div>
+      <h4>Guest Advocate</h4>
+      <div class="org">Target — Chesapeake, VA</div>
+      <p>Handling guest services, cash transactions, and drive-up/order pickup operations. Resolving guest concerns and collaborating with the team to hit service and accuracy targets during high-volume shifts.</p>
+    </div>
 
-<div class="timeline-item">
-    <div class="timeline-date">2022 — 2024</div>
-    <h4>Team Leader</h4>
-    <div class="org">Chick-Fil-A — Chesapeake, VA</div>
-    <p>Led shifts and trained new team members on service procedures. Maintained operational efficiency and customer satisfaction in a fast-paced environment.</p>
-</div>
+    <div class="timeline-item">
+      <div class="timeline-date">2024 — Present</div>
+      <h4>Banquet Server</h4>
+      <div class="org">Chick-fil-A — Chesapeake, VA</div>
+      <p>Support full-service catering operations for private and corporate events. Assist with event setup and breakdown, food service execution, guest interaction, and coordination with kitchen and event leads.</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2024 — 2025</div>
+      <h4>Team Member</h4>
+      <div class="org">Plato's Closet — Chesapeake, VA</div>
+      <p>Managed inventory tagging, maintained store displays, and assisted customers with purchases and inquiries.</p>
+    </div>
+  </div>
 </section>
 
 <section id="contact" class="contact-section">
   <div class="section-header fade-in" style="text-align: center;">
-    <div class="section-label" style="justify-content: center;">04 — Contact</div>
+    <div class="section-label" style="justify-content: center;">05 — Contact</div>
     <h2 class="section-title">Let's Connect</h2>
     <p style="color: var(--text-secondary); margin-top: 1rem; font-weight: 300;">Open to internships, collaborations, and security conversations.</p>
   </div>
