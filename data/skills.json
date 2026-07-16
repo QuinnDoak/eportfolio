@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Operating Systems",
+    "items": ["Kali Linux", "Ubuntu", "Debian", "Windows", "macOS", "VirtualBox", "VMware"]
+  },
+  {
+    "title": "Networking & Analysis",
+    "items": ["Wireshark", "NetworkMiner", "Nmap", "TCP/IP", "Subnetting", "DNS", "DHCP", "IPv6"]
+  },
+  {
+    "title": "Security & Defense",
+    "items": ["Snort", "pfSense", "Incident Response", "Log Analysis", "Active Directory", "John the Ripper", "Threat Analysis"]
+  },
+  {
+    "title": "Identity & Access",
+    "items": ["PKI", "FIDO", "SSO", "MFA", "Access Control"]
+  },
+  {
+    "title": "Programming & Scripting",
+    "items": ["Python", "Bash", "Vi / Vim", "Git", "HTML / CSS", "Technical Writing"]
+  }
+]

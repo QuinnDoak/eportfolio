@@ -1,0 +1,42 @@
+{
+  "education": [
+    {
+      "date": "2024 — 2027 (Expected)",
+      "title": "B.S. Cybersecurity",
+      "org": "Old Dominion University — Norfolk, VA",
+      "detail": "Minor in Political Science. Focused on network security, system administration, and cyber law. Hands-on lab experience with Linux, packet and log analysis, intrusion detection, and secure infrastructure design."
+    }
+  ],
+  "work": [
+    {
+      "date": "July 2026",
+      "title": "Staff Instructor — CyberAI Summer Camp",
+      "org": "ODU School of Cybersecurity — Norfolk, VA",
+      "detail": "Authored curriculum and instructed 4 sessions for middle and high school students. Built hands-on AI and cybersecurity materials, including a Google Colab notebook (password-strength classifier + data-poisoning demo)."
+    },
+    {
+      "date": "2025 — Present",
+      "title": "Guest Advocate",
+      "org": "Target — Chesapeake, VA",
+      "detail": "Handle guest services, cash transactions, and drive-up/order-pickup operations. Resolve guest concerns and collaborate with the team to hit service and accuracy targets during high-volume shifts."
+    },
+    {
+      "date": "2024 — Present",
+      "title": "Banquet Server",
+      "org": "CCVA — Chesapeake, VA",
+      "detail": "Support full-service catering operations for private and corporate events. Assist with event setup and breakdown, food-service execution, guest interaction, and coordination with kitchen and event leads."
+    },
+    {
+      "date": "2024 — 2025",
+      "title": "Team Member",
+      "org": "Plato's Closet — Chesapeake, VA",
+      "detail": "Managed inventory tagging, maintained store displays, and assisted customers with purchases and inquiries."
+    },
+    {
+      "date": "2022 — 2024",
+      "title": "Team Leader",
+      "org": "Chick-fil-A — Chesapeake, VA",
+      "detail": "Led shifts and trained new team members on service procedures. Maintained operational efficiency and customer satisfaction in a fast-paced environment, with responsibility for shift-level decision-making and team coordination."
+    }
+  ]
+}
