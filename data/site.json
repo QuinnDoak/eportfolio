@@ -1,0 +1,45 @@
+{
+  "lastUpdated": "2026-07-16",
+  "meta": {
+    "title": "Quinn Doak — Cybersecurity ePortfolio",
+    "description": "Quinn Doak — Cybersecurity student at Old Dominion University. Shipping real projects, building security tools. U.S. Citizen, eligible for Secret clearance. Seeking a Summer 2027 internship.",
+    "url": "https://quinndoak.dev/"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Quinn Doak",
+    "nameHighlight": "Quinn",
+    "title": "Cybersecurity @ Old Dominion University · Seeking Summer 2027 Internship",
+    "bio": "Building real-world security tools and shipping production projects. Based in Chesapeake, VA — U.S. Citizen · Eligible for Secret clearance.",
+    "photo": { "src": "assets/me.jpg", "alt": "Portrait of Quinn Doak", "width": 300, "height": 360 }
+  },
+  "about": {
+    "paragraphs": [
+      "Hi! I'm Quinn, a B.S. Cybersecurity student at Old Dominion University (Class of 2027) with a minor in political science, based in Chesapeake, Virginia. Most of my time goes into networking, Linux, and hands-on lab work, but the political science minor keeps me plugged into the policy and governance side of security too. Outside of school I'm into music, traveling, and anything and everything outside. I'm actively seeking internship and entry-level opportunities in cybersecurity.",
+      "U.S. Citizen · Eligible for Secret clearance"
+    ],
+    "stats": [
+      { "number": "ODU", "label": "University" },
+      { "number": "CYSE", "label": "Major" },
+      { "number": "20+", "label": "Courses" },
+      { "number": "2027", "label": "Expected Grad" }
+    ]
+  },
+  "certifications": [
+    { "name": "Google Cybersecurity Professional Certification", "status": "Earned" },
+    { "name": "CompTIA Security+ (SY0-701)", "status": "Scheduled" }
+  ],
+  "relevantCoursework": [
+    "CYSE 300 — Introduction to Cybersecurity",
+    "CYSE 200T — Cybersecurity & Society",
+    "CYSE 201S — Cyber & Social Sciences",
+    "CYSE 250 — Programming & Networking",
+    "CRJS 310 — Cybercriminology",
+    "PHIL 230E — Ethics"
+  ],
+  "contact": [
+    { "label": "Email", "value": "quinn.doak@gmail.com", "href": "mailto:quinn.doak@gmail.com" },
+    { "label": "LinkedIn", "value": "/in/quinn-doak", "href": "https://www.linkedin.com/in/quinn-doak-a37681281/" },
+    { "label": "GitHub", "value": "@QuinnDoak", "href": "https://github.com/QuinnDoak" }
+  ]
+}

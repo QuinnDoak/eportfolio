@@ -1,0 +1,75 @@
+[
+  {
+    "name": "costbycity.net",
+    "status": "live",
+    "statusLabel": "Live",
+    "accent": "",
+    "desc": "A production web application with 14,000+ dynamically generated city pages comparing cost-of-living data across the U.S. Real domain, DNS, SEO, AdSense, and an OG image pipeline.",
+    "highlights": [
+      "14,000+ dynamically generated city pages with D3.js data visualizations",
+      "Python data pipelines for sourcing, cleaning, and normalizing cost data",
+      "Deployed on Cloudflare Pages — full DNS, SEO, and AdSense integration",
+      "OG image generation pipeline for social sharing at scale"
+    ],
+    "stack": ["Next.js 14", "D3.js", "Python", "Cloudflare Pages"],
+    "link": { "href": "https://costbycity.net", "label": "↗ Live Site" }
+  },
+  {
+    "name": "Mini SIEM Dashboard",
+    "status": "wip",
+    "statusLabel": "In Progress",
+    "accent": "accent-yellow",
+    "desc": "A Python-based security information and event management tool for ingesting, normalizing, and visualizing log data — the applied continuation of my CYSE 300 coursework in log analysis, intrusion detection, and incident response.",
+    "highlights": [
+      "Python log parser complete — ingests and normalizes events from multiple log sources",
+      "Builds directly on hands-on CYSE 300 labs: log analysis, Snort intrusion detection, and incident response & forensics",
+      "Planned visualization layer for real-time security event dashboarding"
+    ],
+    "stack": ["Python", "Log Parsing", "SIEM", "Snort"],
+    "link": null
+  },
+  {
+    "name": "Constant Hall Network Infrastructure Design",
+    "status": "completed",
+    "statusLabel": "Completed",
+    "accent": "accent-green",
+    "desc": "Full network infrastructure design for Constant Hall at ODU covering all floors. Delivered as a stakeholder-ready PDF presentation applying TIA/EIA standards. (CYSE 495)",
+    "highlights": [
+      "Designed a Cat 5e extended-star topology spanning all floors of Constant Hall",
+      "Specified MER and TC placement with full cable-run estimation",
+      "Produced a complete materials budget and sourcing plan",
+      "Applied TIA/EIA-568 structured cabling standards throughout"
+    ],
+    "stack": ["Network Design", "TIA/EIA-568", "Cat 5e", "Infrastructure"],
+    "link": null
+  },
+  {
+    "name": "Volt Typhoon Tabletop Exercise",
+    "status": "completed",
+    "statusLabel": "Completed",
+    "accent": "accent-orange",
+    "desc": "Group simulation of a Chinese state-sponsored (Volt Typhoon) attack on the Port of Virginia — detection, coordinated response, and legal authorities. (CRJS 406)",
+    "highlights": [
+      "Simulated detection and response to a Volt Typhoon-style attack on critical infrastructure",
+      "Navigated inter-agency response coordination and legal authorities under live pressure",
+      "Applied CISA and DoD frameworks to a real-world critical infrastructure scenario",
+      "Selected the Port of Virginia as target: a high-value, realistic critical-infrastructure context"
+    ],
+    "stack": ["Incident Response", "Critical Infrastructure", "Nation-State", "Tabletop"],
+    "link": null
+  },
+  {
+    "name": "CyberAI Summer Camp Curriculum",
+    "status": "completed",
+    "statusLabel": "Completed",
+    "accent": "accent-purple",
+    "desc": "Staff instructor at ODU's School of Cybersecurity summer camp (July 13–17, 2026) — authored AI + cybersecurity curriculum for middle and high school students with no prior background.",
+    "highlights": [
+      "Authored 4 instructional sessions covering AI fundamentals and cybersecurity",
+      "Built a \"Train a Simple AI Model\" Google Colab notebook — a password-strength classifier with a data-poisoning demo",
+      "Produced slide decks, lesson plans, and camper handouts for each session"
+    ],
+    "stack": ["Python", "Google Colab", "Curriculum Design", "AI/ML"],
+    "link": null
+  }
+]
