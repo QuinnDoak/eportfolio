@@ -3,16 +3,23 @@
     "name": "costbycity.net",
     "status": "live",
     "statusLabel": "Live",
-    "accent": "",
     "desc": "A production web application with 14,000+ dynamically generated city pages comparing cost-of-living data across the U.S. Real domain, DNS, SEO, AdSense, and an OG image pipeline.",
     "highlights": [
       "14,000+ dynamically generated city pages with D3.js data visualizations",
       "Python data pipelines for sourcing, cleaning, and normalizing cost data",
-      "Deployed on Cloudflare Pages — full DNS, SEO, and AdSense integration",
+      "Deployed on Netlify— full DNS, SEO, and AdSense integration",
       "OG image generation pipeline for social sharing at scale"
     ],
-    "stack": ["Next.js 14", "D3.js", "Python", "Cloudflare Pages"],
-    "link": { "href": "https://costbycity.net", "label": "↗ Live Site" }
+    "stack": [
+      "Next.js 14",
+      "D3.js",
+      "Python",
+      "Netlify"
+    ],
+    "link": {
+      "href": "https://costbycity.net",
+      "label": "↗ Live Site"
+    }
   },
   {
     "name": "Mini SIEM Dashboard",
@@ -25,8 +32,12 @@
       "Builds directly on hands-on CYSE 300 labs: log analysis, Snort intrusion detection, and incident response & forensics",
       "Planned visualization layer for real-time security event dashboarding"
     ],
-    "stack": ["Python", "Log Parsing", "SIEM", "Snort"],
-    "link": null
+    "stack": [
+      "Python",
+      "Log Parsing",
+      "SIEM",
+      "Snort"
+    ]
   },
   {
     "name": "Constant Hall Network Infrastructure Design",
@@ -40,8 +51,12 @@
       "Produced a complete materials budget and sourcing plan",
       "Applied TIA/EIA-568 structured cabling standards throughout"
     ],
-    "stack": ["Network Design", "TIA/EIA-568", "Cat 5e", "Infrastructure"],
-    "link": null
+    "stack": [
+      "Network Design",
+      "TIA/EIA-568",
+      "Cat 5e",
+      "Infrastructure"
+    ]
   },
   {
     "name": "Volt Typhoon Tabletop Exercise",
@@ -55,8 +70,12 @@
       "Applied CISA and DoD frameworks to a real-world critical infrastructure scenario",
       "Selected the Port of Virginia as target: a high-value, realistic critical-infrastructure context"
     ],
-    "stack": ["Incident Response", "Critical Infrastructure", "Nation-State", "Tabletop"],
-    "link": null
+    "stack": [
+      "Incident Response",
+      "Critical Infrastructure",
+      "Nation-State",
+      "Tabletop"
+    ]
   },
   {
     "name": "CyberAI Summer Camp Curriculum",
@@ -69,7 +88,11 @@
       "Built a \"Train a Simple AI Model\" Google Colab notebook — a password-strength classifier with a data-poisoning demo",
       "Produced slide decks, lesson plans, and camper handouts for each session"
     ],
-    "stack": ["Python", "Google Colab", "Curriculum Design", "AI/ML"],
-    "link": null
+    "stack": [
+      "Python",
+      "Google Colab",
+      "Curriculum Design",
+      "AI/ML"
+    ]
   }
 ]
