@@ -2,7 +2,7 @@
   "lastUpdated": "2026-07-16",
   "meta": {
     "title": "Quinn Doak — Cybersecurity ePortfolio",
-    "description": "Quinn Doak — Cybersecurity student at Old Dominion University. Shipping real projects, building security tools. U.S. Citizen, eligible for Secret clearance. Seeking a Summer 2027 internship.",
+    "description": "Quinn Doak — Cybersecurity student at Old Dominion University. Building security tools. U.S. Citizen, eligible for Secret clearance. ",
     "url": "https://quinndoak.dev/"
   },
   "hero": {
@@ -11,7 +11,12 @@
     "nameHighlight": "Quinn",
     "title": "Cybersecurity @ Old Dominion University · Seeking Summer 2027 Internship",
     "bio": "Building real-world security tools and shipping production projects. Based in Chesapeake, VA — U.S. Citizen · Eligible for Secret clearance.",
-    "photo": { "src": "assets/me.jpg", "alt": "Portrait of Quinn Doak", "width": 300, "height": 360 }
+    "photo": {
+      "src": "assets/me.jpg",
+      "alt": "Portrait of Quinn Doak",
+      "width": 300,
+      "height": 360
+    }
   },
   "about": {
     "paragraphs": [
@@ -19,15 +24,33 @@
       "U.S. Citizen · Eligible for Secret clearance"
     ],
     "stats": [
-      { "number": "ODU", "label": "University" },
-      { "number": "CYSE", "label": "Major" },
-      { "number": "20+", "label": "Courses" },
-      { "number": "2027", "label": "Expected Grad" }
+      {
+        "number": "ODU",
+        "label": "University"
+      },
+      {
+        "number": "CYSE",
+        "label": "Major"
+      },
+      {
+        "number": "20+",
+        "label": "Courses"
+      },
+      {
+        "number": "2027",
+        "label": "Expected Grad"
+      }
     ]
   },
   "certifications": [
-    { "name": "Google Cybersecurity Professional Certification", "status": "Earned" },
-    { "name": "CompTIA Security+ (SY0-701)", "status": "Scheduled" }
+    {
+      "name": "Google Cybersecurity Professional Certification",
+      "status": "Earned"
+    },
+    {
+      "name": "CompTIA Security+ (SY0-701)",
+      "status": "Scheduled"
+    }
   ],
   "relevantCoursework": [
     "CYSE 300 — Introduction to Cybersecurity",
@@ -38,8 +61,20 @@
     "PHIL 230E — Ethics"
   ],
   "contact": [
-    { "label": "Email", "value": "quinn.doak@gmail.com", "href": "mailto:quinn.doak@gmail.com" },
-    { "label": "LinkedIn", "value": "/in/quinn-doak", "href": "https://www.linkedin.com/in/quinn-doak-a37681281/" },
-    { "label": "GitHub", "value": "@QuinnDoak", "href": "https://github.com/QuinnDoak" }
+    {
+      "label": "Email",
+      "value": "quinn.doak@gmail.com",
+      "href": "mailto:quinn.doak@gmail.com"
+    },
+    {
+      "label": "LinkedIn",
+      "value": "/in/quinn-doak",
+      "href": "https://www.linkedin.com/in/quinn-doak-a37681281/"
+    },
+    {
+      "label": "GitHub",
+      "value": "@QuinnDoak",
+      "href": "https://github.com/QuinnDoak"
+    }
   ]
 }
