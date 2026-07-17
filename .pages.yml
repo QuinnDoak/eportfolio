@@ -1,0 +1,255 @@
+media:
+  input: assets
+  output: assets
+
+content:
+  - name: site
+    label: Site & About
+    type: file
+    path: data/site.json
+    format: json
+    fields:
+      - name: lastUpdated
+        label: Last updated
+        type: date
+        options:
+          format: yyyy-MM-dd
+      - name: meta
+        label: SEO metadata
+        type: object
+        fields:
+          - name: title
+            type: string
+          - name: description
+            type: text
+          - name: url
+            type: string
+      - name: hero
+        label: Hero
+        type: object
+        fields:
+          - name: greeting
+            type: string
+          - name: name
+            type: string
+          - name: nameHighlight
+            label: Highlighted part of name
+            type: string
+          - name: title
+            type: text
+          - name: bio
+            type: text
+          - name: photo
+            type: object
+            fields:
+              - name: src
+                type: image
+              - name: alt
+                type: string
+              - name: width
+                type: number
+              - name: height
+                type: number
+      - name: about
+        label: About
+        type: object
+        fields:
+          - name: paragraphs
+            type: text
+            list: true
+          - name: stats
+            type: object
+            list:
+              max: 4
+              collapsible:
+                summary: "{number} — {label}"
+            fields:
+              - name: number
+                type: string
+              - name: label
+                type: string
+      - name: certifications
+        type: object
+        list:
+          collapsible:
+            summary: "{name}"
+        fields:
+          - name: name
+            type: string
+          - name: status
+            type: select
+            options:
+              values: [Earned, Scheduled, In Progress]
+      - name: relevantCoursework
+        label: Relevant coursework
+        type: string
+        list: true
+      - name: contact
+        type: object
+        list:
+          collapsible:
+            summary: "{label}"
+        fields:
+          - name: label
+            type: string
+          - name: value
+            type: string
+          - name: href
+            type: string
+
+  - name: projects
+    label: Projects
+    type: file
+    path: data/projects.json
+    format: json
+    list: true
+    fields:
+      - name: name
+        type: string
+      - name: status
+        type: select
+        options:
+          values: [live, wip, completed]
+      - name: statusLabel
+        label: Status badge text
+        type: string
+      - name: accent
+        type: select
+        options:
+          values:
+            - { label: "Default (teal)", value: "" }
+            - { label: "Purple", value: "accent-purple" }
+            - { label: "Green", value: "accent-green" }
+            - { label: "Orange", value: "accent-orange" }
+            - { label: "Red", value: "accent-red" }
+            - { label: "Yellow", value: "accent-yellow" }
+      - name: desc
+        label: Description
+        type: text
+      - name: highlights
+        type: text
+        list: true
+      - name: stack
+        label: Tech stack chips
+        type: string
+        list: true
+      - name: link
+        label: External link
+        type: object
+        fields:
+          - name: href
+            type: string
+          - name: label
+            type: string
+            description: 'Include the arrow, e.g. "↗ Live Site"'
+
+  - name: courses
+    label: Courses
+    type: file
+    path: data/courses.json
+    format: json
+    fields:
+      - name: courses
+        label: Course list
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{code} — {name}"
+        fields:
+          - name: code
+            type: string
+          - name: name
+            type: string
+          - name: semester
+            type: string
+          - name: accent
+            type: select
+            options:
+              values:
+                - { label: "Default (teal)", value: "" }
+                - { label: "Purple", value: "accent-purple" }
+                - { label: "Green", value: "accent-green" }
+                - { label: "Orange", value: "accent-orange" }
+                - { label: "Red", value: "accent-red" }
+                - { label: "Yellow", value: "accent-yellow" }
+          - name: desc
+            label: Description
+            type: text
+          - name: highlights
+            type: text
+            list: true
+          - name: tags
+            type: string
+            list: true
+      - name: upcoming
+        label: Upcoming term
+        type: object
+        fields:
+          - name: term
+            type: string
+          - name: note
+            type: text
+          - name: items
+            label: Courses
+            type: object
+            list:
+              collapsible:
+                summary: "{code} — {name}"
+            fields:
+              - name: code
+                type: string
+              - name: name
+                type: string
+
+  - name: experience
+    label: Experience
+    type: file
+    path: data/experience.json
+    format: json
+    fields:
+      - name: education
+        type: object
+        list:
+          collapsible:
+            summary: "{title}"
+        fields:
+          - name: date
+            type: string
+          - name: title
+            type: string
+          - name: org
+            type: string
+          - name: detail
+            type: text
+      - name: work
+        label: Work (newest first)
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title} — {org}"
+        fields:
+          - name: date
+            type: string
+          - name: title
+            type: string
+          - name: org
+            type: string
+          - name: detail
+            type: text
+
+  - name: skills
+    label: Skills
+    type: file
+    path: data/skills.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Category
+        type: string
+      - name: items
+        label: Chips
+        type: string
+        list: true
