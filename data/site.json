@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-07-16",
+  "lastUpdated": "2026-09-22",
   "meta": {
-    "title": "Quinn Doak — Cybersecurity ePortfolio",
-    "description": "Quinn Doak — Cybersecurity student at Old Dominion University. Building security tools. U.S. Citizen, eligible for Secret clearance. ",
+    "title": "Quinn Doak | Cybersecurity ePortfolio",
+    "description": "Quinn Doak, Student SOC Analyst at Old Dominion University. Security+ certified, working in CrowdStrike, QRadar, and Entra ID. Seeking SOC and GRC internships. U.S. citizen, eligible for Secret clearance.",
     "url": "https://quinndoak.dev/"
   },
   "hero": {
     "greeting": "Hello, I'm",
     "name": "Quinn Doak",
     "nameHighlight": "Quinn",
-    "title": "Cybersecurity @ Old Dominion University · Political Science minor",
-    "bio": "Based in Chesapeake, VA",
+    "title": "Student SOC Analyst @ ODU · Security+ · Seeking SOC & GRC Internships",
+    "bio": "B.S. Cybersecurity, Political Science minor · Chesapeake, VA",
     "photo": {
       "src": "assets/me.jpg",
       "alt": "Portrait of Quinn Doak",
@@ -20,45 +20,52 @@
   },
   "about": {
     "paragraphs": [
-      "Hi! I'm Quinn, a B.S. Cybersecurity student at Old Dominion University (Class of 2027) with a minor in political science, based in Chesapeake, Virginia. Most of my time goes into networking, Linux, and hands-on lab work, and this past summer I taught cybersecurity to high schoolers at ODU's CyberAI Summer Camp. The political science minor keeps me plugged into the policy and governance side of security too, which is where a lot of it actually gets decided. Outside of school I'm into live music, working on my car, and anything that gets me outside.",
+      "I got into cybersecurity because I like figuring out how things work, and how they break. Right now I'm doing that as a Student SOC Analyst at Old Dominion University, where I spend my shifts triaging phishing, digging into risky sign-ins, and chasing down endpoint alerts in CrowdStrike, QRadar, and Entra ID. There's nothing quite like tracing a weird alert back to a real campaign.",
+      "At home, I run a Raspberry Pi honeypot that attackers poke at every day, and I'm building a Python-based mini SIEM to make sense of what they're trying. This summer I also taught at ODU's CyberAI Summer Camp, which reminded me how much I enjoy explaining security in a way that clicks for people.",
+      "Before cyber, I spent years in customer-facing roles and freelance live sound engineering. Those taught me how to stay calm under pressure and communicate clearly, both of which come in handy when an incident hits.",
+      "I'm Security+ certified, studying for the CCNA, and pursuing a B.S. in Cybersecurity with a Political Science minor (graduating December 2027). I'm especially interested in SOC and GRC roles in the Hampton Roads defense community. Outside of work, I'm into OSINT and national security policy, live sound, and speedcubing.",
       "U.S. Citizen · Eligible for Secret clearance"
     ],
     "stats": [
       {
-        "number": "ODU",
-        "label": "University"
+        "number": "SOC",
+        "label": "Student Analyst"
       },
       {
-        "number": "CYSE",
-        "label": "Major"
+        "number": "Sec+",
+        "label": "Certified"
       },
       {
-        "number": "20+",
-        "label": "Courses"
+        "number": "3.5",
+        "label": "GPA"
       },
       {
-        "number": "2027",
+        "number": "Dec '27",
         "label": "Expected Grad"
       }
     ]
   },
   "certifications": [
     {
-      "name": "Google Cybersecurity Professional Certification",
+      "name": "CompTIA Security+ (SY0-701)",
       "status": "Earned"
     },
     {
-      "name": "CompTIA Security+ (SY0-701)",
-      "status": "Scheduled"
+      "name": "Google Cybersecurity Professional Certificate",
+      "status": "Earned"
+    },
+    {
+      "name": "Cisco CCNA (200-301)",
+      "status": "In Progress"
     }
   ],
   "relevantCoursework": [
-    "CYSE 300 — Introduction to Cybersecurity",
-    "CYSE 200T — Cybersecurity & Society",
-    "CYSE 201S — Cyber & Social Sciences",
-    "CYSE 250 — Programming & Networking",
-    "CRJS 310 — Cybercriminology",
-    "PHIL 230E — Ethics"
+    "CYSE 300: Introduction to Cybersecurity",
+    "CYSE 200T: Cybersecurity & Society",
+    "CYSE 201S: Cyber & Social Sciences",
+    "CYSE 250: Programming & Networking",
+    "CRJS 310: Cybercriminology",
+    "PHIL 230E: Ethics"
   ],
   "contact": [
     {
@@ -68,7 +75,7 @@
     },
     {
       "label": "LinkedIn",
-      "value": "/in/quinn-doak",
+      "value": "/in/quinn-doak-a37681281",
       "href": "https://www.linkedin.com/in/quinn-doak-a37681281/"
     },
     {

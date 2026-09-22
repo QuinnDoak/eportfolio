@@ -1,42 +1,42 @@
 {
   "education": [
     {
-      "date": "2024 — 2027 (Expected)",
-      "title": "B.S. Cybersecurity",
-      "org": "Old Dominion University — Norfolk, VA",
-      "detail": "Minor in Political Science. Focused on network security, system administration, and cyber law. Hands-on lab experience with Linux, packet and log analysis, intrusion detection, and secure infrastructure design."
+      "date": "Aug 2024 – Dec 2027 (Expected)",
+      "title": "B.S. Cybersecurity, Minor in Political Science",
+      "org": "Old Dominion University · Norfolk, VA",
+      "detail": "GPA 3.5/4.0. Focused on security operations, network security, and cyber policy. Hands-on lab work with Linux, packet and log analysis, intrusion detection, and secure infrastructure design, paired with coursework on governance and cyber law."
     }
   ],
   "work": [
     {
-      "date": "July 2026",
-      "title": "Staff Instructor — CyberAI Summer Camp",
-      "org": "ODU School of Cybersecurity — Norfolk, VA",
-      "detail": "Authored curriculum and instructed 4 sessions for middle and high school students. Built hands-on AI and cybersecurity materials, including a Google Colab notebook (password-strength classifier + data-poisoning demo)."
+      "date": "Aug 2026 – Present",
+      "title": "Student SOC Analyst",
+      "org": "Old Dominion University Student Security Operations Center · Norfolk, VA",
+      "detail": "Selected for a competitive two-semester program with a summer internship, monitoring and responding to live threats across the university on rotating CrowdStrike, PagerDuty, and user investigation shifts. Triage phishing in PagerDuty against 85%+ accuracy, sub-2-min MTTA, and sub-40-min MTTR targets. Investigate risky sign-ins and compromised accounts in Entra ID and QRadar SIEM using KQL. Identified and contained unauthorized software installs across multiple faculty endpoints in CrowdStrike Falcon, linking the activity to an active malvertising campaign. Document investigations per SOC SOPs and brief findings to SOC staff."
     },
     {
-      "date": "2025 — Present",
+      "date": "Jul 2026",
+      "title": "Staff Instructor, CyberAI Summer Camp",
+      "org": "Old Dominion University · Norfolk, VA",
+      "detail": "Designed and delivered a week-long curriculum on cybersecurity and AI, covering AI-enabled attacks, phishing analysis, and model training fundamentals. Authored all course materials, including slide decks, speaker scripts, and hands-on phishing analysis labs, plus Jeopardy review games with a real-time Firebase buzzer system."
+    },
+    {
+      "date": "Aug 2025 – Present",
       "title": "Guest Advocate",
-      "org": "Target — Chesapeake, VA",
-      "detail": "Handle guest services, cash transactions, and drive-up/order-pickup operations. Resolve guest concerns and collaborate with the team to hit service and accuracy targets during high-volume shifts."
+      "org": "Target · Chesapeake, VA",
+      "detail": "Resolve guest escalations in a high-volume retail environment with accurate transaction and cash handling, and support drive-up and order pickup operations."
     },
     {
-      "date": "2024 — Present",
+      "date": "Nov 2024 – Present",
       "title": "Banquet Server",
-      "org": "CCVA — Chesapeake, VA",
-      "detail": "Support full-service catering operations for private and corporate events. Assist with event setup and breakdown, food-service execution, guest interaction, and coordination with kitchen and event leads."
+      "org": "Traditions Catering and Events · Chesapeake, VA",
+      "detail": "Coordinate with kitchen staff and event leads to execute private and corporate events on tight timelines, handling setup, service, and breakdown."
     },
     {
-      "date": "2024 — 2025",
-      "title": "Team Member",
-      "org": "Plato's Closet — Chesapeake, VA",
-      "detail": "Managed inventory tagging, maintained store displays, and assisted customers with purchases and inquiries."
-    },
-    {
-      "date": "2022 — 2024",
+      "date": "Oct 2022 – May 2024",
       "title": "Team Leader",
-      "org": "Chick-fil-A — Chesapeake, VA",
-      "detail": "Led shifts and trained new team members on service procedures. Maintained operational efficiency and customer satisfaction in a fast-paced environment, with responsibility for shift-level decision-making and team coordination."
+      "org": "Chick-fil-A · Chesapeake, VA",
+      "detail": "Promoted from Team Member to Team Leader. Supervised peak shifts, delegated tasks, trained new hires on procedures and food safety, and handled cash reconciliation at close."
     }
   ]
 }

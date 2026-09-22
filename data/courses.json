@@ -7,7 +7,7 @@
       "accent": "",
       "desc": "Advanced topics course covering network infrastructure design, protocol security, encryption standards, and defense-in-depth strategies for enterprise environments. Capstone deliverable: a full structured cabling design for a multi-floor university building.",
       "highlights": [
-        "Designed a Cat 5e extended-star topology for Constant Hall at ODU — covering all floors, MER/TC placement, and cable-run estimation",
+        "Designed a Cat 5e extended-star topology for Constant Hall at ODU, covering all floors, MER/TC placement, and cable-run estimation",
         "Produced a complete materials budget and sourcing plan; applied TIA/EIA-568 structured cabling standards",
         "Delivered the design as a stakeholder-ready PDF presentation",
         "Explored PKI frameworks, certificate authorities, and FIDO authentication standards",
@@ -21,13 +21,13 @@
       "name": "Introduction to Cybersecurity",
       "semester": "Spring 2026",
       "accent": "accent-purple",
-      "desc": "A hands-on introduction to defensive cybersecurity built around 15 lab exercises spanning firewalls, intrusion detection, packet and log analysis, incident response, and enterprise identity — plus written research on breach case studies and security-policy design.",
+      "desc": "A hands-on introduction to defensive cybersecurity built around 15 lab exercises spanning firewalls, intrusion detection, packet and log analysis, incident response, and enterprise identity, plus written research on breach case studies and security-policy design.",
       "highlights": [
         "Completed 15 hands-on labs: pfSense firewall hardening, NAT & remote access, wireless security, Windows/Linux security policies, and closing security holes",
         "Ran intrusion detection with Snort and performed packet analysis with Wireshark and NetworkMiner",
-        "Log analysis and incident-response & forensics labs — the direct foundation for my Mini SIEM Dashboard project",
+        "Log analysis and incident-response & forensics labs: the direct foundation for my Mini SIEM Dashboard project",
         "Configured Active Directory in an enterprise environment and applied patching, anti-virus, and endpoint hardening",
-        "Wrote a short research paper designing a corporate security policy — a governance/GRC artifact identifying five priority issues",
+        "Wrote a short research paper designing a corporate security policy: a governance/GRC artifact identifying five priority issues",
         "Authored a research paper analyzing the 2013 Target data breach"
       ],
       "tags": ["pfSense", "Snort", "Wireshark", "Incident Response", "Active Directory", "Log Analysis"]
@@ -42,7 +42,7 @@
         "Managed user/group accounts and configured access-control policies on Kali Linux",
         "Deep-dive into SGID and sticky-bit permissions for shared-directory security",
         "Bash scripting lab: automated a rotating backup system using crontab task scheduling",
-        "NAT vs. Bridged networking in VirtualBox / Kali — traffic isolation and attack-surface analysis",
+        "NAT vs. Bridged networking in VirtualBox / Kali: traffic isolation and attack-surface analysis",
         "Password-cracking lab using John the Ripper on hashed credential files"
       ],
       "tags": ["Kali Linux", "Bash Scripting", "John the Ripper", "Permissions", "VirtualBox"]
@@ -54,8 +54,8 @@
       "accent": "accent-orange",
       "desc": "Legal frameworks governing cyberspace, including constitutional protections, digital privacy, government surveillance, whistleblower cases, and critical-infrastructure defense law.",
       "highlights": [
-        "Volt Typhoon tabletop exercise: simulated a Chinese state-sponsored attack on the Port of Virginia — detection, inter-agency response, and legal authorities under live pressure",
-        "Analyzed the Computer Fraud and Abuse Act (CFAA) — the foundational U.S. computer-crime statute — and its application to modern cases",
+        "Volt Typhoon tabletop exercise: simulated a Chinese state-sponsored attack on the Port of Virginia, covering detection, inter-agency response, and legal authorities under live pressure",
+        "Analyzed the Computer Fraud and Abuse Act (CFAA), the foundational U.S. computer-crime statute, and its application to modern cases",
         "Analyzed Fourth Amendment implications in digital surveillance and government access to electronic records",
         "Researched Julian Assange / WikiLeaks and the tension between transparency and national security",
         "Studied legal precedents in data-privacy regulation and cross-border enforcement"
@@ -150,7 +150,7 @@
       "name": "Introduction to Criminology",
       "semester": "Fall 2024",
       "accent": "accent-red",
-      "desc": "Foundational study of crime, justice systems, and sociological theories explaining criminal behavior — essential context for understanding cybercrime.",
+      "desc": "Foundational study of crime, justice systems, and sociological theories explaining criminal behavior: essential context for understanding cybercrime.",
       "highlights": [
         "Studied classical, strain, and social-learning theories of criminal behavior",
         "Explored the structure and function of the U.S. criminal justice system",
@@ -162,7 +162,7 @@
   ],
   "upcoming": {
     "term": "Fall 2026",
-    "note": "Next up — the internship and policy-focused stretch of the degree.",
+    "note": "Next up: the internship and policy-focused stretch of the degree.",
     "items": [
       { "code": "CYSE 368", "name": "Cybersecurity Internship" },
       { "code": "CYSE 301", "name": "Cyber Techniques and Operations" },
