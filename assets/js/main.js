@@ -141,7 +141,7 @@
         .join('');
       up.innerHTML = `
         <div class="upcoming-block fade-in">
-          <h3>Upcoming — ${esc(data.upcoming.term)}</h3>
+          <h3>${esc(data.upcoming.label || 'Upcoming')} — ${esc(data.upcoming.term)}</h3>
           <p class="upcoming-note">${esc(data.upcoming.note)}</p>
           <ul class="upcoming-list">${items}</ul>
         </div>`;

@@ -14,7 +14,13 @@
         "Studied IPv6 security implications and transition vulnerabilities",
         "Analyzed SSO implementations and authentication protocols across enterprise environments"
       ],
-      "tags": ["Network Design", "TIA/EIA-568", "PKI", "IPv6", "Infrastructure"]
+      "tags": [
+        "Network Design",
+        "TIA/EIA-568",
+        "PKI",
+        "IPv6",
+        "Infrastructure"
+      ]
     },
     {
       "code": "CYSE 300",
@@ -30,7 +36,14 @@
         "Wrote a short research paper designing a corporate security policy: a governance/GRC artifact identifying five priority issues",
         "Authored a research paper analyzing the 2013 Target data breach"
       ],
-      "tags": ["pfSense", "Snort", "Wireshark", "Incident Response", "Active Directory", "Log Analysis"]
+      "tags": [
+        "pfSense",
+        "Snort",
+        "Wireshark",
+        "Incident Response",
+        "Active Directory",
+        "Log Analysis"
+      ]
     },
     {
       "code": "CYSE 270",
@@ -45,7 +58,13 @@
         "NAT vs. Bridged networking in VirtualBox / Kali: traffic isolation and attack-surface analysis",
         "Password-cracking lab using John the Ripper on hashed credential files"
       ],
-      "tags": ["Kali Linux", "Bash Scripting", "John the Ripper", "Permissions", "VirtualBox"]
+      "tags": [
+        "Kali Linux",
+        "Bash Scripting",
+        "John the Ripper",
+        "Permissions",
+        "VirtualBox"
+      ]
     },
     {
       "code": "CRJS 406",
@@ -60,7 +79,13 @@
         "Researched Julian Assange / WikiLeaks and the tension between transparency and national security",
         "Studied legal precedents in data-privacy regulation and cross-border enforcement"
       ],
-      "tags": ["Volt Typhoon", "CFAA", "4th Amendment", "Digital Privacy", "Policy"]
+      "tags": [
+        "Volt Typhoon",
+        "CFAA",
+        "4th Amendment",
+        "Digital Privacy",
+        "Policy"
+      ]
     },
     {
       "code": "CRJS 310",
@@ -74,7 +99,11 @@
         "Studied digital-forensics fundamentals, evidence handling, and chain of custody",
         "Examined the evolution of cybercrime legislation and cross-border enforcement challenges"
       ],
-      "tags": ["Cybercrime", "Digital Forensics", "Criminal Justice"]
+      "tags": [
+        "Cybercrime",
+        "Digital Forensics",
+        "Criminal Justice"
+      ]
     },
     {
       "code": "CYSE 250",
@@ -88,7 +117,12 @@
         "Captured and analyzed live network traffic using Wireshark",
         "Completed socket-programming exercises using a client/server model"
       ],
-      "tags": ["Python", "TCP/IP", "Wireshark", "Subnetting"]
+      "tags": [
+        "Python",
+        "TCP/IP",
+        "Wireshark",
+        "Subnetting"
+      ]
     },
     {
       "code": "CYSE 201S",
@@ -102,7 +136,11 @@
         "Explored cyber-victimization research and patterns of online risk behavior",
         "Built a literature review connecting psychology and cyber-offending"
       ],
-      "tags": ["Social Science", "Research", "Human Behavior"]
+      "tags": [
+        "Social Science",
+        "Research",
+        "Human Behavior"
+      ]
     },
     {
       "code": "CYSE 200T",
@@ -116,7 +154,12 @@
         "Analyzed cybersecurity risk in healthcare, finance, and critical-infrastructure sectors",
         "Evaluated the ethical responsibilities of security practitioners in public and private roles"
       ],
-      "tags": ["Society", "Ethics", "Technology", "Policy"]
+      "tags": [
+        "Society",
+        "Ethics",
+        "Technology",
+        "Policy"
+      ]
     },
     {
       "code": "IDS 300W",
@@ -129,7 +172,11 @@
         "Developed technical-writing skills for security documentation",
         "Strengthened the ability to communicate complex concepts to non-technical audiences"
       ],
-      "tags": ["APA Writing", "Research", "Technical Communication"]
+      "tags": [
+        "APA Writing",
+        "Research",
+        "Technical Communication"
+      ]
     },
     {
       "code": "PHIL 230E",
@@ -143,7 +190,11 @@
         "Wrote argumentative papers defending positions on contested moral issues",
         "Discussed the ethical responsibilities carried by cybersecurity professionals"
       ],
-      "tags": ["Ethics", "Philosophy", "Moral Reasoning"]
+      "tags": [
+        "Ethics",
+        "Philosophy",
+        "Moral Reasoning"
+      ]
     },
     {
       "code": "CRJS 215S",
@@ -157,17 +208,34 @@
         "Analyzed the relationship between crime, law, and social policy",
         "Connected traditional criminology to emerging patterns in cybercrime"
       ],
-      "tags": ["Criminal Justice", "Sociology", "Theory"]
+      "tags": [
+        "Criminal Justice",
+        "Sociology",
+        "Theory"
+      ]
     }
   ],
   "upcoming": {
+    "label": "Current",
     "term": "Fall 2026",
-    "note": "Next up: the internship and policy-focused stretch of the degree.",
+    "note": "In progress: the internship and policy-focused stretch of the degree.",
     "items": [
-      { "code": "CYSE 368", "name": "Cybersecurity Internship" },
-      { "code": "CYSE 301", "name": "Cyber Techniques and Operations" },
-      { "code": "CYSE 425W", "name": "Cyber Strategy and Policy" },
-      { "code": "POLS 101S", "name": "American Political System" }
+      {
+        "code": "CYSE 368",
+        "name": "Cybersecurity Internship"
+      },
+      {
+        "code": "CYSE 301",
+        "name": "Cyber Techniques and Operations"
+      },
+      {
+        "code": "CYSE 425W",
+        "name": "Cyber Strategy and Policy"
+      },
+      {
+        "code": "POLS 101S",
+        "name": "American Political System"
+      }
     ]
   }
 }
