@@ -27,31 +27,47 @@
 
   /* ---------- renderers ---------- */
 
-  function renderHero(hero) {
+  function renderHero(hero, status) {
     const root = el('hero-grid');
     if (!root) return;
-    const nameHtml = hero.nameHighlight
-      ? esc(hero.name).replace(esc(hero.nameHighlight), `<span class="highlight">${esc(hero.nameHighlight)}</span>`)
-      : `<span class="highlight">${esc(hero.name)}</span>`;
+    const actions = (hero.actions || [])
+      .map((a) => {
+        const external = /^https?:/.test(a.href);
+        const attrs = external ? ' target="_blank" rel="noopener"' : '';
+        return `<a href="${esc(a.href)}" class="btn btn-${esc(a.style)}"${attrs}>${esc(a.label)}</a>`;
+      })
+      .join('');
+    const rows = ((status && status.rows) || [])
+      .map((r) => {
+        const mark = r.mark
+          ? ` <span class="status-mark"><span aria-hidden="true">✓</span> ${esc(r.mark)}</span>`
+          : '';
+        return `
+        <div class="status-row">
+          <dt class="status-key">${esc(r.key)}</dt>
+          <dd class="status-value">${esc(r.value)}${mark}</dd>
+        </div>`;
+      })
+      .join('');
+    const panel = status
+      ? `
+      <aside class="status-panel" aria-label="Profile status">
+        <div class="status-panel-head">
+          <span>${esc(status.title)}</span>
+          <span class="status-badge"><span aria-hidden="true">●</span> ${esc(status.badge)}</span>
+        </div>
+        <dl class="status-rows">${rows}</dl>
+      </aside>`
+      : '';
     root.innerHTML = `
-      <div class="hero-photo-col">
-        <div class="hero-photo-wrapper">
-          <img src="${esc(hero.photo.src)}" alt="${esc(hero.photo.alt)}" class="hero-photo"
-               width="${esc(hero.photo.width)}" height="${esc(hero.photo.height)}"
-               loading="eager" fetchpriority="high">
-        </div>
+      <div class="hero-copy">
+        <p class="hero-prompt">${esc(hero.prompt)}</p>
+        <h1 class="hero-name">${esc(hero.name)}</h1>
+        <p class="hero-lead">${esc(hero.targetLine)}</p>
+        <p class="hero-supporting">${esc(hero.supporting)}</p>
+        <div class="hero-actions">${actions}</div>
       </div>
-      <div class="hero-text-col">
-        <p class="hero-greeting">${esc(hero.greeting)}</p>
-        <h1 class="hero-name">${nameHtml}</h1>
-        <p class="hero-title">${esc(hero.title)}</p>
-        <p class="hero-bio">${esc(hero.bio)}</p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-outline">Get in Touch</a>
-          <a href="resume.pdf" class="btn btn-download" download>&#x2913; Resume</a>
-        </div>
-      </div>`;
+      ${panel}`;
   }
 
   function renderAbout(about) {
@@ -361,7 +377,7 @@
         document.title = site.meta.title;
       }
 
-      renderHero(site.hero);
+      renderHero(site.hero, site.status);
       renderAbout(site.about);
       renderProjects(projects);
       renderCourses(courses);

@@ -6,17 +6,33 @@
     "url": "https://quinndoak.dev/"
   },
   "hero": {
-    "greeting": "Hello, I'm",
+    "prompt": "$ whoami",
     "name": "Quinn Doak",
-    "nameHighlight": "Quinn",
-    "title": "Student SOC Analyst @ ODU · Security+ · Seeking SOC & GRC Internships",
-    "bio": "B.S. Cybersecurity, Political Science minor · Chesapeake, VA",
+    "targetLine": "Cybersecurity student at ODU building SOC and GRC skills for the defense sector. Security+ certified.",
+    "supporting": "Analyst in the ODU Student SOC and writer on security policy. Graduating December 2027.",
+    "actions": [
+      { "label": "View my work", "href": "#work", "style": "primary" },
+      { "label": "Get in touch", "href": "#contact", "style": "secondary" },
+      { "label": "GitHub", "href": "https://github.com/QuinnDoak", "style": "secondary" }
+    ],
     "photo": {
       "src": "assets/me.jpg",
       "alt": "Portrait of Quinn Doak",
       "width": 300,
       "height": 360
     }
+  },
+  "status": {
+    "title": "profile.status",
+    "badge": "open to roles",
+    "rows": [
+      { "key": "cert", "value": "Security+ SY0-701", "mark": "earned" },
+      { "key": "cert", "value": "Google Cybersecurity", "mark": "earned" },
+      { "key": "studying", "value": "CCNA 200-301" },
+      { "key": "role", "value": "ODU Student SOC" },
+      { "key": "clearance", "value": "Secret eligible" },
+      { "key": "grad", "value": "Dec 2027" }
+    ]
   },
   "about": {
     "paragraphs": [
