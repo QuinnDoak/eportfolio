@@ -6,6 +6,9 @@
 (function () {
   'use strict';
 
+  document.documentElement.classList.remove('no-js');
+  document.documentElement.classList.add('js');
+
   const esc = (s) =>
     String(s)
       .replace(/&/g, '&amp;')
@@ -187,7 +190,7 @@
   }
 
   function renderExperience(exp) {
-    const root = el('experience-root');
+    const root = el('experience');
     if (!root) return;
     const edu = exp.education
       .map((e) => `
@@ -240,6 +243,63 @@
   }
 
   /* ---------- behavior ---------- */
+
+  function setupMobileMenu() {
+    const toggle = el('menu-toggle');
+    const menu = el('nav-menu');
+    if (!toggle || !menu) return;
+
+    const mq = window.matchMedia('(max-width: 767px)');
+    let open = false;
+
+    const focusables = () => Array.from(menu.querySelectorAll('a'));
+
+    function setOpen(next, restoreFocus) {
+      open = next;
+      menu.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      document.body.classList.toggle('menu-open', open);
+      if (open) {
+        const first = focusables()[0];
+        if (first) first.focus();
+      } else if (restoreFocus) {
+        toggle.focus();
+      }
+    }
+
+    toggle.addEventListener('click', () => setOpen(!open, false));
+
+    menu.addEventListener('click', (e) => {
+      if (e.target.closest('a') && open) setOpen(false, false);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!open) return;
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        setOpen(false, true);
+        return;
+      }
+      if (e.key === 'Tab') {
+        // Keep Tab cycling between the toggle button and the menu links
+        const items = [toggle].concat(focusables());
+        const first = items[0];
+        const last = items[items.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    });
+
+    mq.addEventListener('change', () => {
+      if (!mq.matches && open) setOpen(false, false);
+    });
+  }
 
   function setupFadeIn() {
     const items = document.querySelectorAll('.fade-in');
@@ -329,9 +389,14 @@
     }
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', boot);
-  } else {
+  function start() {
+    setupMobileMenu();
     boot();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start);
+  } else {
+    start();
   }
 })();

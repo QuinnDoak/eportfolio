@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +33,7 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -63,17 +63,24 @@
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<nav>
-  <a href="#top" class="nav-logo">QUINN</a>
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#academics">Academics</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-    <a href="resume.pdf" class="nav-resume" download>&#x2913; Resume</a>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="#top" class="site-logo"><span class="logo-dot" aria-hidden="true"></span>quinndoak.dev</a>
+    <nav aria-label="Main">
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <svg class="icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+        <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+      </button>
+      <div class="nav-links" id="nav-menu">
+        <a href="#work">/work</a>
+        <a href="#experience">/experience</a>
+        <a href="#about">/about</a>
+        <a href="resume.pdf" class="nav-resume" download>/resume.pdf</a>
+        <a href="resume.pdf" class="nav-menu-cta" download>Download resume</a>
+      </div>
+    </nav>
   </div>
-</nav>
+</header>
 
 <noscript>
   <div class="noscript-banner" id="noscript-fallback">
@@ -105,7 +112,7 @@
     <div class="about-grid fade-in" id="about-grid"></div>
   </section>
 
-  <section id="projects">
+  <section id="work">
     <div class="section-header fade-in">
       <p class="section-label">02 · Projects</p>
       <h2 class="section-title">Things I've Shipped</h2>
@@ -132,7 +139,7 @@
     <div class="skills-container fade-in" id="skills-container"></div>
     <div class="certifications fade-in" id="certs-root"></div>
     <div class="certifications coursework fade-in" id="coursework-root"></div>
-    <div class="fade-in" id="experience-root"></div>
+    <div class="fade-in" id="experience"></div>
   </section>
 
   <section id="contact" class="contact-section">
