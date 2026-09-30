@@ -183,9 +183,12 @@ content:
             type: string
             list: true
       - name: upcoming
-        label: Upcoming term
+        label: Current term
         type: object
         fields:
+          - name: label
+            label: Heading word
+            type: string
           - name: term
             type: string
           - name: note

@@ -1,7 +1,15 @@
 [
   {
+    "title": "Security Operations",
+    "items": ["CrowdStrike Falcon", "IBM QRadar SIEM", "Microsoft Entra ID", "PagerDuty", "KQL", "Phishing Analysis", "Incident Triage"]
+  },
+  {
+    "title": "GRC & Policy",
+    "items": ["Governance, Risk & Compliance", "Cyber Policy", "Cyber Law", "Security Policy Design"]
+  },
+  {
     "title": "Operating Systems",
-    "items": ["Kali Linux", "Ubuntu", "Debian", "Windows", "macOS", "VirtualBox", "VMware"]
+    "items": ["Kali Linux", "Arch Linux", "Ubuntu", "Debian", "Windows", "macOS", "VirtualBox", "VMware"]
   },
   {
     "title": "Networking & Analysis",
@@ -9,7 +17,7 @@
   },
   {
     "title": "Security & Defense",
-    "items": ["Snort", "pfSense", "Incident Response", "Log Analysis", "Active Directory", "John the Ripper", "Threat Analysis"]
+    "items": ["Snort", "pfSense", "Cowrie Honeypot", "Incident Response", "Log Analysis", "Active Directory", "John the Ripper", "Threat Analysis"]
   },
   {
     "title": "Identity & Access",
@@ -17,6 +25,6 @@
   },
   {
     "title": "Programming & Scripting",
-    "items": ["Python", "Bash", "Vi / Vim", "Git", "HTML / CSS", "Technical Writing"]
+    "items": ["Python", "Bash", "Vi / Vim", "Git", "Firebase", "HTML / CSS", "Technical Writing"]
   }
 ]
