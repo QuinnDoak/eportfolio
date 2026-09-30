@@ -1,22 +1,5 @@
 [
   {
-    "slug": "volt-typhoon-tabletop",
-    "title": "Volt Typhoon Tabletop Exercise",
-    "category": "Incident Response · Coursework",
-    "status": "completed",
-    "featured": true,
-    "summary": "Group simulation of a Chinese state-sponsored attack on the Port of Virginia, covering detection, coordinated response, and legal authorities. (CRJS 406)",
-    "tags": [
-      "Incident Response",
-      "Critical Infrastructure",
-      "Tabletop",
-      "Legal Authorities"
-    ],
-    "image": null,
-    "links": {},
-    "caseStudy": false
-  },
-  {
     "slug": "constant-hall-network",
     "title": "Constant Hall Network Design",
     "category": "Networking · Coursework",

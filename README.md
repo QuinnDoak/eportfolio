@@ -27,8 +27,6 @@ assets/
   js/nav.js             Mobile menu. Loaded by every page.
   js/main.js            Fetches data/*.json and renders the homepage.
   js/case-study.js      Table-of-contents scroll-spy on case study pages.
-  me.jpg                Old hero photo. The Console hero is text plus the
-                        status panel, so nothing references this today.
   favicon.svg           Primary favicon. favicon-32.png / apple-touch-icon.png = raster fallbacks.
 data/
   site.json             Hero, profile.status rows, about copy, stat tiles,
