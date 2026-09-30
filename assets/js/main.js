@@ -88,20 +88,39 @@
     const root = el('projects-grid');
     if (!root) return;
     root.innerHTML = projects
+      .filter((p) => p.featured)
       .map((p) => {
-        const highlights = p.highlights.map((h) => `<li>${esc(h)}</li>`).join('');
-        const stack = p.stack.map((t) => `<span class="tag">${esc(t)}</span>`).join('');
-        const link = p.link
-          ? `<a href="${esc(p.link.href)}" target="_blank" rel="noopener" class="project-link">${esc(p.link.label)}</a>`
+        const tags = (p.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join('');
+        const well = p.image
+          ? `<div class="work-card-well"><img src="${esc(p.image.src)}" alt="${esc(p.image.alt)}"
+               width="${esc(p.image.width)}" height="${esc(p.image.height)}" loading="lazy"></div>`
+          : `<div class="work-card-well" aria-hidden="true"><span>${esc(p.title)}</span></div>`;
+        const href = p.caseStudy
+          ? `projects/${encodeURIComponent(p.slug)}/`
+          : (p.links && p.links.live) || null;
+        const external = href && /^https?:/.test(href);
+        const attrs = external ? ' target="_blank" rel="noopener"' : '';
+        const title = href
+          ? `<a href="${esc(href)}"${attrs}>${esc(p.title)}</a>`
+          : esc(p.title);
+        const linkLabel = p.caseStudy ? 'Read the case study' : 'Visit the site';
+        const link = href
+          ? `<a href="${esc(href)}"${attrs} class="work-card-link">${linkLabel} <span aria-hidden="true">→</span></a>`
+          : '';
+        const status = p.status
+          ? `<span class="work-card-status"><span aria-hidden="true">●</span> ${esc(p.status)}</span>`
           : '';
         return `
-        <article class="project-card ${esc(p.accent || '')}">
-          <p class="project-status ${esc(p.status)}">${esc(p.statusLabel)}</p>
-          <h3 class="project-name">${esc(p.name)}</h3>
-          <p class="project-desc">${esc(p.desc)}</p>
-          <ul class="project-highlights">${highlights}</ul>
-          <div class="project-footer">
-            <div class="project-stack">${stack}</div>
+        <article class="work-card">
+          ${well}
+          <div class="work-card-body">
+            <div class="work-card-meta">
+              <span class="work-card-eyebrow">${esc(p.category)}</span>
+              ${status}
+            </div>
+            <h3 class="work-card-title">${title}</h3>
+            <p class="work-card-summary">${esc(p.summary)}</p>
+            <div class="work-card-tags">${tags}</div>
             ${link}
           </div>
         </article>`;
@@ -112,15 +131,15 @@
   function renderCourses(data) {
     const root = el('course-grid');
     if (!root) return;
-    root.innerHTML = data.courses
-      .map((c) => {
+    const VISIBLE_COUNT = 5;
+    const card = (c) => {
         const slug = c.code.replace(/\s+/g, '-').toLowerCase();
         const btnId = `course-btn-${slug}`;
         const panelId = `course-panel-${slug}`;
         const highlights = c.highlights.map((h) => `<li>${esc(h)}</li>`).join('');
         const tags = c.tags.map((t) => `<span class="tag">${esc(t)}</span>`).join('');
         return `
-        <article class="course-card ${esc(c.accent || '')}">
+        <article class="course-card">
           <h3 class="course-heading">
             <button type="button" class="course-header" id="${btnId}" aria-expanded="false" aria-controls="${panelId}">
               <span class="course-header-left">
@@ -139,8 +158,31 @@
             <div class="course-tags">${tags}</div>
           </div>
         </article>`;
-      })
-      .join('');
+    };
+
+    const visible = data.courses.slice(0, VISIBLE_COUNT).map(card).join('');
+    const extra = data.courses.slice(VISIBLE_COUNT).map(card).join('');
+    const more = extra
+      ? `
+      <div class="course-grid-more" id="more-courses" hidden>${extra}</div>
+      <button type="button" class="btn btn-secondary show-all-courses" id="show-all-courses"
+              aria-expanded="false" aria-controls="more-courses">
+        Show all ${data.courses.length} courses
+      </button>`
+      : '';
+    root.innerHTML = visible + more;
+
+    const showAll = el('show-all-courses');
+    if (showAll) {
+      showAll.addEventListener('click', () => {
+        const expanded = showAll.getAttribute('aria-expanded') === 'true';
+        showAll.setAttribute('aria-expanded', String(!expanded));
+        el('more-courses').hidden = expanded;
+        showAll.textContent = expanded
+          ? `Show all ${data.courses.length} courses`
+          : 'Show fewer courses';
+      });
+    }
 
     // Delegated, accessible accordion toggle
     root.addEventListener('click', (e) => {
@@ -159,8 +201,8 @@
         .map((i) => `<li><span class="u-code">${esc(i.code)}</span>${esc(i.name)}</li>`)
         .join('');
       up.innerHTML = `
-        <div class="upcoming-block fade-in">
-          <h3>${esc(data.upcoming.label || 'Upcoming')} — ${esc(data.upcoming.term)}</h3>
+        <div class="upcoming-block">
+          <h3>${esc(data.upcoming.label || 'Upcoming')}: ${esc(data.upcoming.term)}</h3>
           <p class="upcoming-note">${esc(data.upcoming.note)}</p>
           <ul class="upcoming-list">${items}</ul>
         </div>`;

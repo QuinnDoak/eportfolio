@@ -1,10 +1,26 @@
 {
   "courses": [
     {
+      "code": "CYSE 425W",
+      "name": "Cyber Strategy and Policy",
+      "semester": "Fall 2026 (in progress)",
+      "desc": "Writing-intensive study of national cyber strategy and policy, centered on a five-paper policy analysis series written from the perspective of a policy analyst.",
+      "highlights": [
+        "Selected Zero Trust as the focus policy for a five-paper analysis series: the policy case, political implications, and ethical implications so far",
+        "Wrote a 1,000-word midterm paper analyzing the March 2026 National Cybersecurity Strategy, with a deep dive on one of its six policy pillars",
+        "Weekly analysis discussions on current cyber strategy topics"
+      ],
+      "tags": [
+        "Policy Analysis",
+        "Zero Trust",
+        "Governance",
+        "Cyber Strategy"
+      ]
+    },
+    {
       "code": "CYSE 495",
       "name": "Topics: Intro to Networking & Security",
       "semester": "Spring 2026",
-      "accent": "",
       "desc": "Advanced topics course covering network infrastructure design, protocol security, encryption standards, and defense-in-depth strategies for enterprise environments. Capstone deliverable: a full structured cabling design for a multi-floor university building.",
       "highlights": [
         "Designed a Cat 5e extended-star topology for Constant Hall at ODU, covering all floors, MER/TC placement, and cable-run estimation",
@@ -26,12 +42,11 @@
       "code": "CYSE 300",
       "name": "Introduction to Cybersecurity",
       "semester": "Spring 2026",
-      "accent": "accent-purple",
       "desc": "A hands-on introduction to defensive cybersecurity built around 15 lab exercises spanning firewalls, intrusion detection, packet and log analysis, incident response, and enterprise identity, plus written research on breach case studies and security-policy design.",
       "highlights": [
         "Completed 15 hands-on labs: pfSense firewall hardening, NAT & remote access, wireless security, Windows/Linux security policies, and closing security holes",
         "Ran intrusion detection with Snort and performed packet analysis with Wireshark and NetworkMiner",
-        "Log analysis and incident-response & forensics labs: the direct foundation for my Mini SIEM Dashboard project",
+        "Completed log analysis and incident-response & forensics labs end to end",
         "Configured Active Directory in an enterprise environment and applied patching, anti-virus, and endpoint hardening",
         "Wrote a short research paper designing a corporate security policy: a governance/GRC artifact identifying five priority issues",
         "Authored a research paper analyzing the 2013 Target data breach"
@@ -49,7 +64,6 @@
       "code": "CYSE 270",
       "name": "Linux System for Cybersecurity",
       "semester": "Spring 2026",
-      "accent": "accent-green",
       "desc": "Hands-on Linux administration and system security covering user management, file permissions, shell scripting, and security hardening on Kali Linux. 11 labs completed across the semester.",
       "highlights": [
         "Managed user/group accounts and configured access-control policies on Kali Linux",
@@ -70,7 +84,6 @@
       "code": "CRJS 406",
       "name": "Cyber Law",
       "semester": "Spring 2026",
-      "accent": "accent-orange",
       "desc": "Legal frameworks governing cyberspace, including constitutional protections, digital privacy, government surveillance, whistleblower cases, and critical-infrastructure defense law.",
       "highlights": [
         "Volt Typhoon tabletop exercise: simulated a Chinese state-sponsored attack on the Port of Virginia, covering detection, inter-agency response, and legal authorities under live pressure",
@@ -91,7 +104,6 @@
       "code": "CRJS 310",
       "name": "Cybercriminology: Foundations",
       "semester": "Fall 2025",
-      "accent": "accent-red",
       "desc": "Study of criminal behavior in digital spaces, cybercrime typologies, digital forensics foundations, and the factors driving cybercriminal activity.",
       "highlights": [
         "Studied cybercrime typologies and the factors driving online victimization",
@@ -109,7 +121,6 @@
       "code": "CYSE 250",
       "name": "Basic Cybersecurity Programming & Networking",
       "semester": "Fall 2025",
-      "accent": "accent-yellow",
       "desc": "Programming concepts and networking fundamentals applied to cybersecurity, including scripting, TCP/IP, subnetting, and network troubleshooting.",
       "highlights": [
         "Built Python scripts for file parsing, input validation, and basic automation",
@@ -128,7 +139,6 @@
       "code": "CYSE 201S",
       "name": "Cybersecurity and the Social Sciences",
       "semester": "Spring 2025",
-      "accent": "accent-purple",
       "desc": "Interdisciplinary study connecting cybersecurity to social-science research methods, human behavior, and the social dimensions of digital security.",
       "highlights": [
         "Applied social-science research methods to cybersecurity case studies and surveys",
@@ -146,7 +156,6 @@
       "code": "CYSE 200T",
       "name": "Cybersecurity, Technology, and Society",
       "semester": "Fall 2024",
-      "accent": "",
       "desc": "Exploration of cybersecurity's role in society, examining how technology intersects with culture, policy, ethics, and global security challenges.",
       "highlights": [
         "Wrote reflection essays connecting the CIA triad to real-world breach case studies",
@@ -165,7 +174,6 @@
       "code": "IDS 300W",
       "name": "Interdisciplinary Theory & Concepts",
       "semester": "Spring 2026",
-      "accent": "accent-green",
       "desc": "Writing-intensive course presenting cybersecurity as an interdisciplinary field, strengthening research methodology and APA-formatted academic writing.",
       "highlights": [
         "Completed an APA-formatted essay on cybersecurity as an interdisciplinary field",
@@ -182,7 +190,6 @@
       "code": "PHIL 230E",
       "name": "Introduction to Ethics",
       "semester": "Fall 2025",
-      "accent": "accent-orange",
       "desc": "Ethical reasoning and moral philosophy, providing a critical framework for evaluating dilemmas in cybersecurity, privacy, and technology.",
       "highlights": [
         "Compared utilitarian, deontological, and virtue-ethics frameworks in applied contexts",
@@ -200,7 +207,6 @@
       "code": "CRJS 215S",
       "name": "Introduction to Criminology",
       "semester": "Fall 2024",
-      "accent": "accent-red",
       "desc": "Foundational study of crime, justice systems, and sociological theories explaining criminal behavior: essential context for understanding cybercrime.",
       "highlights": [
         "Studied classical, strain, and social-learning theories of criminal behavior",
@@ -216,25 +222,17 @@
     }
   ],
   "upcoming": {
-    "label": "Current",
+    "label": "Also this term",
     "term": "Fall 2026",
-    "note": "In progress: the internship and policy-focused stretch of the degree.",
+    "note": "In progress alongside CYSE 425W: the Student SOC course sequence and the political science minor.",
     "items": [
       {
-        "code": "CYSE 368",
-        "name": "Cybersecurity Internship"
-      },
-      {
-        "code": "CYSE 301",
-        "name": "Cyber Techniques and Operations"
-      },
-      {
-        "code": "CYSE 425W",
-        "name": "Cyber Strategy and Policy"
+        "code": "CYSE 395",
+        "name": "Topics: Introduction to SOC I & II"
       },
       {
         "code": "POLS 101S",
-        "name": "American Political System"
+        "name": "Intro to American Politics"
       }
     ]
   }
