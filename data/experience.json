@@ -1,42 +1,46 @@
 {
-  "education": [
-    {
-      "date": "Aug 2024 – Dec 2027 (Expected)",
-      "title": "B.S. Cybersecurity, Minor in Political Science",
-      "org": "Old Dominion University · Norfolk, VA",
-      "detail": "GPA 3.5/4.0. Focused on security operations, network security, and cyber policy. Hands-on lab work with Linux, packet and log analysis, intrusion detection, and secure infrastructure design, paired with coursework on governance and cyber law."
-    }
-  ],
   "work": [
     {
-      "date": "Aug 2026 – Present",
+      "featured": true,
+      "date": "Aug 2026 to present",
       "title": "Student SOC Analyst",
-      "org": "Old Dominion University Student Security Operations Center · Norfolk, VA",
-      "detail": "Selected for a competitive two-semester program with a summer internship, monitoring and responding to live threats across the university on rotating CrowdStrike, PagerDuty, and user investigation shifts. Triage phishing in PagerDuty against 85%+ accuracy, sub-2-min MTTA, and sub-40-min MTTR targets. Investigate risky sign-ins and compromised accounts in Entra ID and QRadar SIEM using KQL. Identified and contained unauthorized software installs across multiple faculty endpoints in CrowdStrike Falcon, linking the activity to an active malvertising campaign. Document investigations per SOC SOPs and brief findings to SOC staff."
+      "org": "Old Dominion University Student Security Operations Center",
+      "summary": "Selected for a competitive two-semester program with a summer internship. I monitor and respond to live threats across the university on rotating CrowdStrike, PagerDuty, and user investigation shifts, triaging phishing against 85% accuracy, sub-2-minute MTTA, and sub-40-minute MTTR targets, and investigating risky sign-ins and compromised accounts in Entra ID and QRadar using KQL. Identified and contained unauthorized software installs across multiple faculty endpoints in CrowdStrike Falcon, linking the activity to an active malvertising campaign.",
+      "tools": [
+        "CrowdStrike Falcon",
+        "IBM QRadar",
+        "Microsoft Entra ID",
+        "PagerDuty",
+        "KQL"
+      ]
     },
     {
       "date": "Jul 2026",
       "title": "Staff Instructor, CyberAI Summer Camp",
-      "org": "Old Dominion University · Norfolk, VA",
-      "detail": "Designed and delivered a week-long curriculum on cybersecurity and AI, covering AI-enabled attacks, phishing analysis, and model training fundamentals. Authored all course materials, including slide decks, speaker scripts, and hands-on phishing analysis labs, plus Jeopardy review games with a real-time Firebase buzzer system."
+      "org": "Old Dominion University"
     },
     {
-      "date": "Aug 2025 – Present",
+      "date": "Aug 2025 to present",
       "title": "Guest Advocate",
-      "org": "Target · Chesapeake, VA",
-      "detail": "Resolve guest escalations in a high-volume retail environment with accurate transaction and cash handling, and support drive-up and order pickup operations."
+      "org": "Target"
     },
     {
-      "date": "Nov 2024 – Present",
+      "date": "Nov 2024 to present",
       "title": "Banquet Server",
-      "org": "Traditions Catering and Events · Chesapeake, VA",
-      "detail": "Coordinate with kitchen staff and event leads to execute private and corporate events on tight timelines, handling setup, service, and breakdown."
+      "org": "Traditions Catering and Events"
     },
     {
-      "date": "Oct 2022 – May 2024",
+      "date": "Oct 2022 to May 2024",
       "title": "Team Leader",
-      "org": "Chick-fil-A · Chesapeake, VA",
-      "detail": "Promoted from Team Member to Team Leader. Supervised peak shifts, delegated tasks, trained new hires on procedures and food safety, and handled cash reconciliation at close."
+      "org": "Chick-fil-A"
+    }
+  ],
+  "education": [
+    {
+      "date": "Aug 2024 to Dec 2027 (expected)",
+      "title": "B.S. Cybersecurity, Minor in Political Science",
+      "org": "Old Dominion University, Norfolk, VA",
+      "detail": "GPA 3.5/4.0. Focused on security operations, network security, and cyber policy. Hands-on lab work with Linux, packet and log analysis, intrusion detection, and secure infrastructure design, paired with coursework on governance and cyber law."
     }
   ]
 }
