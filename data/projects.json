@@ -46,7 +46,12 @@
       "Google Colab",
       "AI/ML"
     ],
-    "image": null,
+    "image": {
+      "src": "assets/images/cyberai-camp-classroom.webp",
+      "alt": "Quinn teaching at the front of a classroom while campers at laptops watch a slide asking whether they would send money to a caller who sounds exactly like their mom.",
+      "width": 1141,
+      "height": 289
+    },
     "links": {},
     "caseStudy": false
   }
