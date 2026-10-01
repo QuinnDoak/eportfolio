@@ -1,119 +1,53 @@
 [
   {
-    "name": "costbycity.net",
-    "status": "live",
-    "statusLabel": "Live",
-    "desc": "A production web application with 14,000+ dynamically generated city pages comparing cost-of-living data across the U.S. Real domain, DNS, SEO, AdSense, and an OG image pipeline.",
-    "highlights": [
-      "14,000+ dynamically generated city pages with D3.js data visualizations",
-      "Python data pipelines for sourcing, cleaning, and normalizing cost data",
-      "Deployed on Netlify: full DNS, SEO, and AdSense integration",
-      "OG image generation pipeline for social sharing at scale"
-    ],
-    "stack": [
-      "Next.js 14",
-      "D3.js",
-      "Python",
-      "Netlify"
-    ],
-    "link": {
-      "href": "https://costbycity.net",
-      "label": "↗ Live Site"
-    }
-  },
-  {
-    "name": "pi-soc: Raspberry Pi Honeypot",
-    "status": "live",
-    "statusLabel": "Live",
-    "accent": "accent-red",
-    "desc": "An internet-facing Cowrie SSH honeypot running on a Raspberry Pi 4 in my home lab. Attackers poke at it every day, and it feeds real attack data into my mini SIEM project.",
-    "highlights": [
-      "Cowrie SSH honeypot exposed to the internet, capturing daily attacker activity",
-      "Custom Python parser turns raw Cowrie logs into structured events",
-      "Runs on a home network built on Firewalla Gold and UniFi Express"
-    ],
-    "stack": [
-      "Raspberry Pi",
-      "Cowrie",
-      "Python",
-      "Linux"
-    ]
-  },
-  {
-    "name": "Mini SIEM Dashboard",
-    "status": "wip",
-    "statusLabel": "In Progress",
-    "accent": "accent-yellow",
-    "desc": "A Python-based mini SIEM for ingesting, normalizing, and visualizing the attack data my honeypot collects, and the applied continuation of my CYSE 300 work in log analysis, intrusion detection, and incident response.",
-    "highlights": [
-      "Cowrie log parser complete: ingests and normalizes honeypot events",
-      "Planned detection engine for flagging brute-force and payload patterns",
-      "Planned web dashboard for real-time security event visualization",
-      "Builds directly on CYSE 300 labs: log analysis, Snort, and incident response"
-    ],
-    "stack": [
-      "Python",
-      "Cowrie",
-      "Log Parsing",
-      "SIEM"
-    ]
-  },
-  {
-    "name": "Constant Hall Network Infrastructure Design",
+    "slug": "constant-hall-network",
+    "title": "Constant Hall Network Design",
+    "category": "Networking · Coursework",
     "status": "completed",
-    "statusLabel": "Completed",
-    "accent": "accent-green",
-    "desc": "Full network infrastructure design for Constant Hall at ODU covering all floors. Delivered as a stakeholder-ready PDF presentation applying TIA/EIA standards. (CYSE 495)",
-    "highlights": [
-      "Designed a Cat 5e extended-star topology spanning all floors of Constant Hall",
-      "Specified MER and TC placement with full cable-run estimation",
-      "Produced a complete materials budget and sourcing plan",
-      "Applied TIA/EIA-568 structured cabling standards throughout"
-    ],
-    "stack": [
+    "featured": true,
+    "summary": "Full network infrastructure design for Constant Hall at ODU, delivered as a stakeholder-ready PDF presentation applying TIA/EIA-568 standards. (CYSE 495)",
+    "tags": [
       "Network Design",
       "TIA/EIA-568",
       "Cat 5e",
       "Infrastructure"
-    ]
+    ],
+    "image": null,
+    "links": {},
+    "caseStudy": false
   },
   {
-    "name": "Volt Typhoon Tabletop Exercise",
-    "status": "completed",
-    "statusLabel": "Completed",
-    "accent": "accent-orange",
-    "desc": "Group simulation of a Chinese state-sponsored (Volt Typhoon) attack on the Port of Virginia, covering detection, coordinated response, and legal authorities. (CRJS 406)",
-    "highlights": [
-      "Simulated detection and response to a Volt Typhoon-style attack on critical infrastructure",
-      "Navigated inter-agency response coordination and legal authorities under live pressure",
-      "Applied CISA and DoD frameworks to a real-world critical infrastructure scenario",
-      "Selected the Port of Virginia as target: a high-value, realistic critical-infrastructure context"
+    "slug": "cyse425w-policy-analysis",
+    "title": "Zero Trust Policy Analysis Series",
+    "category": "GRC · Coursework",
+    "status": "in progress",
+    "featured": true,
+    "summary": "A five-paper policy analysis of Zero Trust written as a policy analyst: the policy case, political implications, and ethical tradeoffs. (CYSE 425W)",
+    "tags": [
+      "Policy Analysis",
+      "Zero Trust",
+      "Governance",
+      "APA Writing"
     ],
-    "stack": [
-      "Incident Response",
-      "Critical Infrastructure",
-      "Nation-State",
-      "Tabletop"
-    ]
+    "image": null,
+    "links": {},
+    "caseStudy": false
   },
   {
-    "name": "CyberAI Summer Camp Curriculum",
+    "slug": "cyberai-camp-curriculum",
+    "title": "CyberAI Summer Camp Curriculum",
+    "category": "Teaching · ODU",
     "status": "completed",
-    "statusLabel": "Completed",
-    "accent": "accent-purple",
-    "desc": "Designed and delivered a week-long curriculum for ODU's CyberAI Summer Camp (July 2026), introducing a mixed-experience group of students to the intersection of cybersecurity and AI.",
-    "highlights": [
-      "Taught sessions on AI-enabled attacks, hands-on phishing analysis, and model training fundamentals",
-      "Built a \"Train a Simple AI Model\" Google Colab notebook: a password-strength classifier with a data-poisoning demo",
-      "Authored all slide decks and speaker scripts",
-      "Built Jeopardy review games with a real-time Firebase buzzer system"
-    ],
-    "stack": [
+    "featured": true,
+    "summary": "Designed and delivered a week-long curriculum on cybersecurity and AI for ODU's CyberAI Summer Camp in July 2026, from slide decks to hands-on labs.",
+    "tags": [
+      "Curriculum Design",
       "Python",
       "Google Colab",
-      "Firebase",
-      "Curriculum Design",
       "AI/ML"
-    ]
+    ],
+    "image": null,
+    "links": {},
+    "caseStudy": false
   }
 ]
