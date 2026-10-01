@@ -95,7 +95,8 @@
         const tags = (p.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join('');
         const well = p.image
           ? `<div class="work-card-well"><img src="${esc(p.image.src)}" alt="${esc(p.image.alt)}"
-               width="${esc(p.image.width)}" height="${esc(p.image.height)}" loading="lazy"></div>`
+               width="${esc(p.image.width)}" height="${esc(p.image.height)}" loading="lazy"
+               ${p.image.position ? `style="object-position:${esc(p.image.position)}"` : ''}></div>`
           : `<div class="work-card-well" aria-hidden="true"><span>${esc(p.title)}</span></div>`;
         const href = p.caseStudy
           ? `projects/${encodeURIComponent(p.slug)}/`

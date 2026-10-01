@@ -50,7 +50,8 @@
       "src": "assets/images/cyberai-camp-classroom.webp",
       "alt": "Quinn teaching at the front of a classroom while campers at laptops watch a slide asking whether they would send money to a caller who sounds exactly like their mom.",
       "width": 1141,
-      "height": 289
+      "height": 289,
+      "position": "right center"
     },
     "links": {},
     "caseStudy": false
